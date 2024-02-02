@@ -1,0 +1,12 @@
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\KomisyonNET.exe.config
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\KomisyonNET.exe
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\KomisyonNET.pdb
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\MaterialSkin.dll
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.csproj.AssemblyReference.cache
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.Properties.Resources.resources
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.csproj.GenerateResource.cache
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.csproj.CoreCompileInputs.cache
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.csproj.CopyComplete
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.exe
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.pdb
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.FormMain.resources
