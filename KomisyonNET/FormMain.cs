@@ -22,7 +22,19 @@ namespace KomisyonNET
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Orange700, Primary.Pink900, Primary.Yellow500, Accent.Purple200, TextShade.BLACK);
-        
+
+            // all text poppins font family
+            foreach (Control c in this.Controls)
+            {
+                if (c is MaterialLabel ||  c is MaterialRadioButton || c is MaterialDivider || c is MaterialTabControl || c is MaterialTabSelector || c is MaterialListView || c is MaterialProgressBar || c is MaterialRadioButton || c is MaterialDivider || c is MaterialTabControl || c is MaterialTabSelector || c is MaterialListView || c is MaterialProgressBar || c is MaterialRadioButton || c is MaterialDivider || c is MaterialTabControl || c is MaterialTabSelector || c is MaterialListView || c is MaterialProgressBar || c is MaterialRadioButton || c is MaterialDivider || c is MaterialTabControl || c is MaterialTabSelector || c is MaterialListView || c is MaterialProgressBar || c is MaterialRadioButton || c is MaterialDivider || c is MaterialTabControl || c is MaterialTabSelector || c is MaterialListView || c is MaterialProgressBar || c is MaterialRadioButton || c is MaterialDivider || c is MaterialTabControl || c is MaterialTabSelector || c is MaterialListView || c is MaterialProgressBar || c is MaterialRadioButton || c is MaterialDivider || c is MaterialTabControl || c is MaterialTabSelector || c is MaterialListView || c is MaterialProgressBar)
+                {
+                    c.Font = new Font("Poppins", c.Font.Size, c.Font.Style);
+                }
+            }
+
+            // label1 font family poppins
+            
+            
             
         }
     }
