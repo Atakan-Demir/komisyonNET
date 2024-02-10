@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using KomisyonNET.Settings;
+using System.IO;
 namespace KomisyonNET
 {
     public partial class FormMain : MaterialForm
@@ -22,7 +23,10 @@ namespace KomisyonNET
             InitializeComponent();
             
             
+
             
+
+
             materialSkinManager.AddFormToManage(this);
             /*
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
@@ -37,19 +41,19 @@ namespace KomisyonNET
             );
             */
 
-            
-         
 
 
-            
+
+            materialLabel14.ForeColor = materialSkinManager.ColorScheme.AccentColor;
+            labelInfo.ForeColor = materialSkinManager.ColorScheme.AccentColor;
 
 
 
             // conf.settings dosyasından tema bilgisi oku
-            int theme = conf.GetTheme();
+            int themeS = conf.GetTheme();
              
-            label1.Text = theme.ToString();
-            if (theme == 1)
+            label1.Text = themeS.ToString();
+            if (themeS == 1)
             {
                 themeSwitch.Checked = true;
             }
@@ -69,6 +73,9 @@ namespace KomisyonNET
                 
                 this.materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
 
+                pictureBoxPTlogo.Image = Properties.Resources.ptLogoDark;
+                
+
                 /*
                 // Renk şemasını ayarla
                 materialSkinManager.ColorScheme = new ColorScheme(
@@ -79,12 +86,18 @@ namespace KomisyonNET
                     TextShade.WHITE  // Text color (Beyaz metin, okunabilirlik için)
                 );
                 */
-                
+
             }
             else
             {
                 
                 materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+
+                
+
+                pictureBoxPTlogo.Image = Properties.Resources.ptLogoWhite;
+
+
                 /*
                 // Renk şemasını ayarla
                 materialSkinManager.ColorScheme = new ColorScheme(
@@ -109,6 +122,21 @@ namespace KomisyonNET
 
 
         }
+
+        private string GetAssetImagePath(string imageName)
+        {
+            // Uygulamanın mevcut çalışma dizinini al
+            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            // .sln dosyasının bir üst klasörüne erişmek için birkaç seviye yukarı çık
+            string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
+
+            // 'assets' klasöründeki resim dosyasının tam yolunu oluştur
+            string imagePath = Path.Combine(projectDirectory, "assets", imageName);
+
+            return imagePath;
+        }
+
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
@@ -268,6 +296,11 @@ TextShade.WHITE);
         private void materialRadioButton3_CheckedChanged(object sender, EventArgs e)
         {
             ApplyGreenYellowTheme();
+        }
+
+        private void BtnCalculate_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

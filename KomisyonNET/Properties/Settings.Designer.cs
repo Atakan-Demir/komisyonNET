@@ -26,12 +26,48 @@ namespace KomisyonNET.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int theme {
+        public int themeS {
             get {
-                return ((int)(this["theme"]));
+                return ((int)(this["themeS"]));
             }
             set {
-                this["theme"] = value;
+                this["themeS"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public int isFirstS {
+            get {
+                return ((int)(this["isFirstS"]));
+            }
+            set {
+                this["isFirstS"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        public double feeS {
+            get {
+                return ((double)(this["feeS"]));
+            }
+            set {
+                this["feeS"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public double comS {
+            get {
+                return ((double)(this["comS"]));
+            }
+            set {
+                this["comS"] = value;
             }
         }
     }

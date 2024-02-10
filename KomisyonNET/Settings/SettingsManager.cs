@@ -11,12 +11,12 @@ namespace KomisyonNET.Settings
 
         public int GetTheme()
         {
-            return (int)Properties.Settings.Default.theme;
+            return (int)Properties.Settings.Default.themeS;
         }
 
-        public void SetTheme(int theme)
+        public void SetTheme(int themeS)
         {
-            Properties.Settings.Default.theme = theme;
+            Properties.Settings.Default.themeS = themeS;
             Properties.Settings.Default.Save();
         }
     }

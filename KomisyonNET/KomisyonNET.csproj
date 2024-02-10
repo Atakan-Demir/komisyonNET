@@ -70,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -87,6 +88,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PaketTaxi\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptLogoLight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptLogoWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ptLogoDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fee-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\commission-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
