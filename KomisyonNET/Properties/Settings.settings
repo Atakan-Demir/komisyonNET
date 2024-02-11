@@ -5,14 +5,23 @@
     <Setting Name="themeS" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="isFirstS" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">1</Value>
+    <Setting Name="isFtS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="feeS" Type="System.Double" Scope="User">
       <Value Profile="(Default)">500</Value>
     </Setting>
     <Setting Name="comS" Type="System.Double" Scope="User">
       <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="exportPathS" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="languageS" Type="System.String" Scope="User">
+      <Value Profile="(Default)">tr</Value>
+    </Setting>
+    <Setting Name="colorSchemaS" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

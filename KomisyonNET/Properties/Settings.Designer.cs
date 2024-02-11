@@ -37,13 +37,13 @@ namespace KomisyonNET.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int isFirstS {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool isFtS {
             get {
-                return ((int)(this["isFirstS"]));
+                return ((bool)(this["isFtS"]));
             }
             set {
-                this["isFirstS"] = value;
+                this["isFtS"] = value;
             }
         }
         
@@ -68,6 +68,42 @@ namespace KomisyonNET.Properties {
             }
             set {
                 this["comS"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string exportPathS {
+            get {
+                return ((string)(this["exportPathS"]));
+            }
+            set {
+                this["exportPathS"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("tr")]
+        public string languageS {
+            get {
+                return ((string)(this["languageS"]));
+            }
+            set {
+                this["languageS"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int colorSchemaS {
+            get {
+                return ((int)(this["colorSchemaS"]));
+            }
+            set {
+                this["colorSchemaS"] = value;
             }
         }
     }

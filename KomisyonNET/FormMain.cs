@@ -17,15 +17,27 @@ namespace KomisyonNET
     {
         // settings manager
         private SettingsManager conf = new SettingsManager();
+        // MaterialSkinManager
         MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
+
+        // get username
+        private string userName = Environment.UserName;
+        private string exportPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         public FormMain()
         {
             InitializeComponent();
-            
-            
 
             
 
+            if (conf.GetIsFt())
+            {
+                conf.SetExportPath(exportPath);
+                conf.SetIsFt(false);
+            }
+            else
+            {
+                exportPath = conf.GetExportPath();
+            }
 
             materialSkinManager.AddFormToManage(this);
             /*
@@ -45,14 +57,21 @@ namespace KomisyonNET
 
 
             materialLabel14.ForeColor = materialSkinManager.ColorScheme.AccentColor;
-            labelInfo.ForeColor = materialSkinManager.ColorScheme.AccentColor;
+            labelPtInfo.ForeColor = materialSkinManager.ColorScheme.AccentColor;
 
 
 
             // conf.settings dosyasından tema bilgisi oku
             int themeS = conf.GetTheme();
              
-            label1.Text = themeS.ToString();
+            //label1.Text = themeS.ToString();
+
+            label1.Text = exportPath;
+            materialLabel1.Text = conf.GetIsFt().ToString();
+
+
+            txtBoxExportPath.Text = exportPath;
+
             if (themeS == 1)
             {
                 themeSwitch.Checked = true;
