@@ -11,9 +11,10 @@ namespace KomisyonNET.PaketTaxi
 
         // properties get set fee commission name
 
-        public string nameSirname { get; set; }
-        public string phone { get; set; }
-        public string email { get; set; }
+        public string nameSurname { get; set; }
+        public double tInvoice { get; set; }
+        public double fee { get; set; }
+        public double commission { get; set; }
 
     }
 }

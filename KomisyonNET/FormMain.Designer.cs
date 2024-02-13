@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.homePage = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.materialFloatingActionButton1 = new MaterialSkin.Controls.MaterialFloatingActionButton();
@@ -55,7 +56,7 @@
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.BtnFolderSelect = new MaterialSkin.Controls.MaterialButton();
-            this.txtBoxFodlerPath = new MaterialSkin.Controls.MaterialTextBox2();
+            this.txtBoxFolderPath = new MaterialSkin.Controls.MaterialTextBox2();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.BtnCalculate = new MaterialSkin.Controls.MaterialButton();
             this.labelPtInfo = new MaterialSkin.Controls.MaterialLabel();
@@ -156,6 +157,7 @@
             // homePage
             // 
             this.homePage.AutoScroll = true;
+            this.homePage.Controls.Add(this.richTextBox1);
             this.homePage.Controls.Add(this.tableLayoutPanel2);
             this.homePage.Controls.Add(this.tableLayoutPanel1);
             this.homePage.ImageKey = "icons8-home-32.png";
@@ -166,6 +168,14 @@
             this.homePage.TabIndex = 0;
             this.homePage.Text = "Anasayfa";
             this.homePage.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(73, 417);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(366, 104);
+            this.richTextBox1.TabIndex = 2;
+            this.richTextBox1.Text = "";
             // 
             // tableLayoutPanel2
             // 
@@ -534,7 +544,7 @@
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel13.Controls.Add(this.BtnFolderSelect, 1, 1);
-            this.tableLayoutPanel13.Controls.Add(this.txtBoxFodlerPath, 2, 1);
+            this.tableLayoutPanel13.Controls.Add(this.txtBoxFolderPath, 2, 1);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(69, 22);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
@@ -564,37 +574,38 @@
             this.BtnFolderSelect.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
             this.BtnFolderSelect.UseAccentColor = true;
             this.BtnFolderSelect.UseVisualStyleBackColor = true;
+            this.BtnFolderSelect.Click += new System.EventHandler(this.BtnFolderSelect_Click);
             // 
-            // txtBoxFodlerPath
+            // txtBoxFolderPath
             // 
-            this.txtBoxFodlerPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBoxFodlerPath.AnimateReadOnly = false;
-            this.txtBoxFodlerPath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtBoxFodlerPath.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtBoxFodlerPath.Depth = 0;
-            this.txtBoxFodlerPath.Enabled = false;
-            this.txtBoxFodlerPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtBoxFodlerPath.HideSelection = true;
-            this.txtBoxFodlerPath.LeadingIcon = null;
-            this.txtBoxFodlerPath.Location = new System.Drawing.Point(187, 11);
-            this.txtBoxFodlerPath.MaxLength = 32767;
-            this.txtBoxFodlerPath.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtBoxFodlerPath.Name = "txtBoxFodlerPath";
-            this.txtBoxFodlerPath.PasswordChar = '\0';
-            this.txtBoxFodlerPath.PrefixSuffixText = null;
-            this.txtBoxFodlerPath.ReadOnly = true;
-            this.txtBoxFodlerPath.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtBoxFodlerPath.SelectedText = "";
-            this.txtBoxFodlerPath.SelectionLength = 0;
-            this.txtBoxFodlerPath.SelectionStart = 0;
-            this.txtBoxFodlerPath.ShortcutsEnabled = true;
-            this.txtBoxFodlerPath.Size = new System.Drawing.Size(257, 48);
-            this.txtBoxFodlerPath.TabIndex = 1;
-            this.txtBoxFodlerPath.TabStop = false;
-            this.txtBoxFodlerPath.Text = "@\'C:\\Users\\Desktop\\Faturalar";
-            this.txtBoxFodlerPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtBoxFodlerPath.TrailingIcon = null;
-            this.txtBoxFodlerPath.UseSystemPasswordChar = false;
+            this.txtBoxFolderPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBoxFolderPath.AnimateReadOnly = false;
+            this.txtBoxFolderPath.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtBoxFolderPath.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtBoxFolderPath.Depth = 0;
+            this.txtBoxFolderPath.Enabled = false;
+            this.txtBoxFolderPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtBoxFolderPath.HideSelection = true;
+            this.txtBoxFolderPath.LeadingIcon = null;
+            this.txtBoxFolderPath.Location = new System.Drawing.Point(187, 11);
+            this.txtBoxFolderPath.MaxLength = 32767;
+            this.txtBoxFolderPath.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtBoxFolderPath.Name = "txtBoxFolderPath";
+            this.txtBoxFolderPath.PasswordChar = '\0';
+            this.txtBoxFolderPath.PrefixSuffixText = null;
+            this.txtBoxFolderPath.ReadOnly = true;
+            this.txtBoxFolderPath.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBoxFolderPath.SelectedText = "";
+            this.txtBoxFolderPath.SelectionLength = 0;
+            this.txtBoxFolderPath.SelectionStart = 0;
+            this.txtBoxFolderPath.ShortcutsEnabled = true;
+            this.txtBoxFolderPath.Size = new System.Drawing.Size(257, 48);
+            this.txtBoxFolderPath.TabIndex = 1;
+            this.txtBoxFolderPath.TabStop = false;
+            this.txtBoxFolderPath.Text = "Faturaların Bulunduğu Klasörü Seçiniz.";
+            this.txtBoxFolderPath.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtBoxFolderPath.TrailingIcon = null;
+            this.txtBoxFolderPath.UseSystemPasswordChar = false;
             // 
             // tableLayoutPanel14
             // 
@@ -770,7 +781,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.30802F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.69199F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel5.Controls.Add(this.txtBoxExportPath, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.BtnExportPath, 0, 1);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 108);
@@ -797,7 +808,7 @@
             this.txtBoxExportPath.Multiline = false;
             this.txtBoxExportPath.Name = "txtBoxExportPath";
             this.txtBoxExportPath.ReadOnly = true;
-            this.txtBoxExportPath.Size = new System.Drawing.Size(336, 50);
+            this.txtBoxExportPath.Size = new System.Drawing.Size(333, 50);
             this.txtBoxExportPath.TabIndex = 0;
             this.txtBoxExportPath.Text = "";
             this.txtBoxExportPath.TrailingIcon = null;
@@ -1082,7 +1093,7 @@
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.09091F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.90909F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableLayoutPanel8.Controls.Add(this.materialLabel8, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.materialComboBox1, 1, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 73);
@@ -1099,7 +1110,7 @@
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel8.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel8.Location = new System.Drawing.Point(17, 21);
+            this.materialLabel8.Location = new System.Drawing.Point(16, 21);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(73, 17);
@@ -1126,11 +1137,11 @@
             this.materialComboBox1.Items.AddRange(new object[] {
             "Türkçe",
             "English"});
-            this.materialComboBox1.Location = new System.Drawing.Point(96, 5);
+            this.materialComboBox1.Location = new System.Drawing.Point(95, 5);
             this.materialComboBox1.MaxDropDownItems = 4;
             this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
             this.materialComboBox1.Name = "materialComboBox1";
-            this.materialComboBox1.Size = new System.Drawing.Size(113, 49);
+            this.materialComboBox1.Size = new System.Drawing.Size(111, 49);
             this.materialComboBox1.StartIndex = 0;
             this.materialComboBox1.TabIndex = 1;
             // 
@@ -1465,7 +1476,7 @@
             this.Name = "FormMain";
             this.Padding = new System.Windows.Forms.Padding(0, 64, 3, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "KomisyonNET v0.2";
+            this.Text = "KomisyonNET v0.6";
             this.materialTabControl1.ResumeLayout(false);
             this.homePage.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -1571,7 +1582,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
         private MaterialSkin.Controls.MaterialButton BtnFolderSelect;
-        private MaterialSkin.Controls.MaterialTextBox2 txtBoxFodlerPath;
+        private MaterialSkin.Controls.MaterialTextBox2 txtBoxFolderPath;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
         private MaterialSkin.Controls.MaterialButton BtnCalculate;
         public MaterialSkin.Controls.MaterialLabel labelPtInfo;
@@ -1590,6 +1601,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
         private MaterialSkin.Controls.MaterialLabel materialLabel21;
         private MaterialSkin.Controls.MaterialLabel materialLabel20;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

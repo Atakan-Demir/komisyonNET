@@ -11,10 +11,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using KomisyonNET.Settings;
 using System.IO;
+using KomisyonNET.PaketTaxi;
 namespace KomisyonNET
 {
     public partial class FormMain : MaterialForm
     {
+
         // settings manager
         private SettingsManager conf = new SettingsManager();
         // MaterialSkinManager
@@ -23,6 +25,12 @@ namespace KomisyonNET
         // get username
         private string userName = Environment.UserName;
         private string exportPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        private string folderPath;
+
+        // constructor
+        PaketTaxiOperations ptOperations = new PaketTaxiOperations();
+        public static string[] pdfFiles;
+
         public FormMain()
         {
             InitializeComponent();
@@ -317,9 +325,49 @@ TextShade.WHITE);
             ApplyGreenYellowTheme();
         }
 
+
+        
         private void BtnCalculate_Click(object sender, EventArgs e)
         {
+            //this.Hide();
+            // show form progress
+            using (FormProgress formProgress = new FormProgress())
+            {
+                formProgress.ShowDialog();
+            }
             
+        }
+
+
+        // Select invoices folder from using
+        private void BtnFolderSelect_Click(object sender, EventArgs e)
+        {
+
+            folderPath = ptOperations.FolderSelect();
+            txtBoxFolderPath.Text = folderPath;
+            if (folderPath != null)
+            {
+                pdfFiles=ptOperations.getPdfFiles(folderPath);
+
+                if (pdfFiles != null)
+                {
+                    labelPtInfo.Text = "*** " + pdfFiles.Length + " Adet Fatura Bulundu.";
+
+                    BtnCalculate.Enabled = true;
+
+                    foreach (var item in pdfFiles)
+                    {
+                        richTextBox1.AppendText(item + "\n");
+                    }
+                }
+                else
+                {
+                    labelPtInfo.Text = "** Fatura Bulunamadı!!";
+                }
+                
+            }
+            
+
         }
     }
 }
