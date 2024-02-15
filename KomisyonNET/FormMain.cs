@@ -12,6 +12,15 @@ using System.Windows.Forms;
 using KomisyonNET.Settings;
 using System.IO;
 using KomisyonNET.PaketTaxi;
+using System.Media;
+using ClosedXML.Excel;
+using System.Windows.Forms.DataVisualization.Charting;
+using KomisyonNET.Statistics;
+using LiveCharts;
+using DocumentFormat.OpenXml.Drawing.Charts;
+using LiveCharts.WinForms;
+using LiveCharts.Wpf;
+using LiveCharts.Definitions.Charts;
 namespace KomisyonNET
 {
     public partial class FormMain : MaterialForm
@@ -19,17 +28,29 @@ namespace KomisyonNET
 
         // settings manager
         private SettingsManager conf = new SettingsManager();
+
+        private string languageS;
+        private double feeS;
+        private double comS;
+        private int themeS;
+        private int colorSchemaS;
+        private string exportPathS;
+
+
         // MaterialSkinManager
         MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
 
         // get username
         private string userName = Environment.UserName;
-        private string exportPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        //private string exportPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         private string folderPath;
+
+
 
         // constructor
         PaketTaxiOperations ptOperations = new PaketTaxiOperations();
         public static string[] pdfFiles;
+        
 
         public FormMain()
         {
@@ -39,48 +60,76 @@ namespace KomisyonNET
 
             if (conf.GetIsFt())
             {
-                conf.SetExportPath(exportPath);
+                exportPathS = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                conf.SetExportPath(exportPathS);
                 conf.SetIsFt(false);
             }
             else
             {
-                exportPath = conf.GetExportPath();
+                exportPathS = conf.GetExportPath();
             }
 
             materialSkinManager.AddFormToManage(this);
-            /*
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-
-            // Renk şemasını ayarla
-            materialSkinManager.ColorScheme = new ColorScheme(
-                Primary.BlueGrey500, // Primary color (Mavi-gri, sakin ve profesyonel)
-                Primary.BlueGrey700, // Dark primary color (Daha koyu mavi-gri, derinlik katar)
-                Primary.BlueGrey100, // Light primary color (Açık mavi-gri, yumuşaklık sağlar)
-                Accent.Orange400,  // Accent color (Canlı turuncu, dikkat çekici ve enerjik)
-                TextShade.BLACK  // Text color (Siyah metin, netlik ve okunabilirlik için)
-            );
-            */
+            
 
 
 
 
-            materialLabel14.ForeColor = materialSkinManager.ColorScheme.AccentColor;
-            labelPtInfo.ForeColor = materialSkinManager.ColorScheme.AccentColor;
+            LoadSettings();
 
 
+            AddEventHandlers();
 
-            // conf.settings dosyasından tema bilgisi oku
-            int themeS = conf.GetTheme();
-             
-            //label1.Text = themeS.ToString();
+            BtnSave.Enabled = false;
+  
+        }
 
-            label1.Text = exportPath;
-            materialLabel1.Text = conf.GetIsFt().ToString();
+ 
+
+        /***************************************** Settings Start *****************************************/
+        #region Settings
 
 
-            txtBoxExportPath.Text = exportPath;
+        // Load Settings function
+        private void LoadSettings()
+        {
 
-            if (themeS == 1)
+            txtBoxExportPath.Text = conf.GetExportPath();
+            exportPathS = conf.GetExportPath();
+
+            MaskTxtBoxFee.Text = conf.GetFee().ToString();
+            feeS = conf.GetFee();
+
+            MaskTxtBoxComm.Text = conf.GetCom().ToString();
+            comS = conf.GetCom();
+
+            languageS = conf.GetLanguage();
+            if (conf.GetLanguage() == "tr")
+            {
+                mComboBoxLanguage.SelectedIndex = 0;
+            }
+            else
+            {
+                mComboBoxLanguage.SelectedIndex = 1;
+            }
+
+            colorSchemaS = conf.GetColorSchema();
+            if (conf.GetColorSchema() == 1)
+            {
+                materialRadioButton1.Checked = true;
+            }
+            else if (conf.GetColorSchema() == 0)
+            {
+                materialRadioButton2.Checked = true;
+            }
+            else if (conf.GetColorSchema() == 2)
+            {
+                materialRadioButton3.Checked = true;
+            }
+
+            themeS = conf.GetTheme();
+            //theme switch
+            if (conf.GetTheme() == 1)
             {
                 themeSwitch.Checked = true;
             }
@@ -89,84 +138,12 @@ namespace KomisyonNET
                 themeSwitch.Checked = false;
             }
 
-
         }
 
-        private void themeSwitch_CheckedChanged(object sender, EventArgs e)
-        {
-            // if checked
-            if (themeSwitch.Checked)
-            {
-                
-                this.materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
-
-                pictureBoxPTlogo.Image = Properties.Resources.ptLogoDark;
-                
-
-                /*
-                // Renk şemasını ayarla
-                materialSkinManager.ColorScheme = new ColorScheme(
-                    Primary.Grey800, // Primary color (Koyu gri, şıklık ve asaleti temsil eder)
-                    Primary.Grey900, // Dark primary color (Daha koyu gri, derinlik katar)
-                    Primary.Grey500, // Light primary color (Açık gri, kontrast sağlar)
-                    Accent.Lime200,  // Accent color (Canlı lime rengi, önemli öğeleri vurgular)
-                    TextShade.WHITE  // Text color (Beyaz metin, okunabilirlik için)
-                );
-                */
-
-            }
-            else
-            {
-                
-                materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-
-                
-
-                pictureBoxPTlogo.Image = Properties.Resources.ptLogoWhite;
-
-
-                /*
-                // Renk şemasını ayarla
-                materialSkinManager.ColorScheme = new ColorScheme(
-                    Primary.BlueGrey500, // Primary color (Mavi-gri, sakin ve profesyonel)
-                    Primary.BlueGrey700, // Dark primary color (Daha koyu mavi-gri, derinlik katar)
-                    Primary.BlueGrey100, // Light primary color (Açık mavi-gri, yumuşaklık sağlar)
-                    Accent.Orange400,  // Accent color (Canlı turuncu, dikkat çekici ve enerjik)
-                    TextShade.BLACK  // Text color (Siyah metin, netlik ve okunabilirlik için)
-                );
-                */
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-        }
-
-        private string GetAssetImagePath(string imageName)
-        {
-            // Uygulamanın mevcut çalışma dizinini al
-            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
-
-            // .sln dosyasının bir üst klasörüne erişmek için birkaç seviye yukarı çık
-            string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
-
-            // 'assets' klasöründeki resim dosyasının tam yolunu oluştur
-            string imagePath = Path.Combine(projectDirectory, "assets", imageName);
-
-            return imagePath;
-        }
-
-
+        // Save button click
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            // save settings
             if (themeSwitch.Checked)
             {
                 conf.SetTheme(1);
@@ -175,104 +152,178 @@ namespace KomisyonNET
             {
                 conf.SetTheme(0);
             }
+
+            conf.SetExportPath(txtBoxExportPath.Text);
+
+            if (MaskTxtBoxFee.Text != "")
+            {
+               conf.SetFee(Convert.ToDouble(MaskTxtBoxFee.Text));
+            }
+            
+            if (MaskTxtBoxComm.Text != "")
+            {
+               conf.SetCom(Convert.ToDouble(MaskTxtBoxComm.Text));
+            }
+            
+
+            if (mComboBoxLanguage.SelectedIndex == 0)
+            {
+                conf.SetLanguage("tr");
+            }
+            else
+            {
+                conf.SetLanguage("en");
+            }
+
+
+            if (materialRadioButton1.Checked)
+            {
+                conf.SetColorSchema(1);
+            }
+            else if (materialRadioButton2.Checked)
+            {
+                conf.SetColorSchema(0);
+            }
+            else if (materialRadioButton3.Checked)
+            {
+                conf.SetColorSchema(2);
+            }
+
+            LoadSettings();
+            BtnSave.Enabled = false;
+
         }
 
-
-        public void ApplyOrangeTheme()
+        // Reset button click
+        private void BtnReset_Click(object sender, EventArgs e)
         {
-       
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
-                MaterialSkin.Primary.Orange800, // Primary
-                MaterialSkin.Primary.Orange900, // Dark
-                MaterialSkin.Primary.Orange500, // Light
-                MaterialSkin.Accent.Orange200,  // Accent
-                MaterialSkin.TextShade.WHITE    // Text Color
-            );
+            LoadSettings();
+            BtnSave.Enabled = false;
         }
 
-        public void ApplyYellowTheme()
+        private void BtnExportPath_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                fbd.SelectedPath = txtBoxExportPath.Text;
+                DialogResult result = fbd.ShowDialog();
+
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    txtBoxExportPath.Text = fbd.SelectedPath;
+                }
+            }
+        }
+
+        private void AddEventHandlers()
+        {
+            // watch for changes
+            txtBoxExportPath.TextChanged += ControlChanged;
+            MaskTxtBoxFee.TextChanged += ControlChanged;
+            MaskTxtBoxComm.TextChanged += ControlChanged;
+            mComboBoxLanguage.SelectedIndexChanged += ControlChanged;
+            materialRadioButton1.CheckedChanged += ControlChanged;
+            materialRadioButton2.CheckedChanged += ControlChanged;
+            materialRadioButton3.CheckedChanged += ControlChanged;
+
+            // watch for keypress
+            MaskTxtBoxFee.KeyPress += new KeyPressEventHandler(MaskTxtBoxFee_KeyPress);
+            MaskTxtBoxComm.KeyPress += new KeyPressEventHandler(MaskTxtBoxComm_KeyPress);
+        }
+
+
+        private void ControlChanged(object sender, EventArgs e)
+        {
+
+            BtnSave.Enabled = true;
+
+        }
+
+
+
+        private void MaskTxtBoxFee_KeyPress(object sender, KeyPressEventArgs e)
         {
             
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
-                MaterialSkin.Primary.Green800,
-                MaterialSkin.Primary.Green900,
-                MaterialSkin.Primary.Green500,
-                MaterialSkin.Accent.Green200,
-                MaterialSkin.TextShade.WHITE
-            );
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                SystemSounds.Beep.Play(); 
+            }
         }
 
-        public void ApplyBlueTheme()
+        private void MaskTxtBoxComm_KeyPress(object sender, KeyPressEventArgs e)
         {
-           
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
-                MaterialSkin.Primary.Blue800,
-                MaterialSkin.Primary.Blue900,
-                MaterialSkin.Primary.Blue500,
-                MaterialSkin.Accent.Blue200,
-                MaterialSkin.TextShade.WHITE
-            );
+            
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                SystemSounds.Beep.Play();
+            }
         }
+
+
+        private void materialTabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            if (materialTabControl1.SelectedTab == settingsPage)
+            {
+                CheckChangesAndEnableSaveButton();
+
+            }
+            else
+            {
+                BtnSave.Enabled = false;
+            }
+
+        }
+
+        private void CheckChangesAndEnableSaveButton()
+        {
+
+            bool hasChanged = false;
+            if (txtBoxExportPath.Text != exportPathS ||
+                Convert.ToDouble(MaskTxtBoxFee.Text) != feeS ||
+                Convert.ToDouble(MaskTxtBoxComm.Text) != comS ||
+                /*mComboBoxLanguage.SelectedItem.ToString() != languageS ||*/
+                (themeSwitch.Checked ? 1 : 0) != themeS)
+            {
+                hasChanged = true;
+            }
+
+            BtnSave.Enabled = hasChanged;
+        }
+
+        private void themeSwitch_CheckedChanged(object sender, EventArgs e)
+        {
+            // if checked
+            if (themeSwitch.Checked)
+            {    
+
+                this.materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+
+                pictureBoxPTlogo.Image = Properties.Resources.ptLogoDark;
+
+            }
+            else
+            {
+
+                materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+
+                pictureBoxPTlogo.Image = Properties.Resources.ptLogoWhite;
+
+            }
+        }
+
         
-        public void SpecialTheme()
-        {
-            materialSkinManager.ColorScheme = new ColorScheme((Primary)0x00C926b3, (Primary)0xA1008B, (Primary)0xDC2EFF, (Accent)0x006E70FF, TextShade.WHITE);
-        }
 
-        public void ApplyPurpleGreenLightTheme()
-        {
-            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
-                Primary.Purple300, // Daha açık mor birincil renk
-                Primary.Purple400, // Açık mor birincil karanlık renk
-                Primary.Purple100, // Çok açık mor birincil açık renk
-                Accent.LightGreen200, // Canlı yeşil vurgu rengi
-                TextShade.BLACK // Metin rengi siyah
-            );
-        }
+        
+       
 
-
-        public void ApplyBlueOrangeTheme()
-        {
-            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
-                Primary.BlueGrey600, // Mavi gri birincil renk
-                Primary.BlueGrey700, // Mavi gri birincil karanlık renk
-                Primary.BlueGrey400, // Mavi gri birincil açık renk
-                Accent.Orange700, // Daha koyu turuncu vurgu rengi
-                TextShade.WHITE // Metin rengi beyaz
-            );
-        }
-
-
-        public void ApplyRedPinkTheme()
-        {
-            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
-                Primary.Red800, // Kırmızı birincil renk
-                Primary.Red900, // Kırmızı birincil karanlık renk
-                Primary.Red500, // Kırmızı birincil açık renk
-                Accent.Pink200, // Pembe vurgu rengi
-                TextShade.WHITE // Metin rengi
-            );
-        }
-
-        public void ApplyGreenBlueTheme()
-        {
-            var materialSkinManager = MaterialSkin.MaterialSkinManager.Instance;
-            materialSkinManager.ColorScheme = new MaterialSkin.ColorScheme(
-                Primary.Teal500, // Teal birincil renk
-                Primary.Teal700, // Teal birincil karanlık renk
-                Primary.Teal200, // Teal birincil açık renk
-                Accent.LightBlue200, // Açık mavi vurgu rengi
-                TextShade.WHITE // Metin rengi beyaz
-            );
-        }
-
-
+        
 
         /*****************/
-        public void ApplyTurquoisePurpleTheme()
+        public void SeconderyColorTheme()
         {
             
             materialSkinManager.ColorScheme = new ColorScheme(// Teal & Amber Tema
@@ -284,7 +335,7 @@ TextShade.WHITE                 // Text Color
 );
            
         }
-        public void ApplyDarkBluePinkTheme()
+        public void PrimaryColorTheme()
         {
             materialSkinManager.ColorScheme = new ColorScheme(
 // Koyu Mavi & Pembe Tema
@@ -296,7 +347,7 @@ TextShade.WHITE                 // Text Color
                 );
             
         }
-        public void ApplyGreenYellowTheme()
+        public void TertiaryColorTheme()
         {
             materialSkinManager.ColorScheme = new ColorScheme(// Deep Purple & Lime Tema
 unchecked((Primary)0xFF673AB7), // Primary
@@ -312,34 +363,25 @@ TextShade.WHITE);
         // material radio button color change
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
-           ApplyTurquoisePurpleTheme();
+           PrimaryColorTheme();
         }
 
         private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            ApplyDarkBluePinkTheme();
+            SeconderyColorTheme();
         }
 
         private void materialRadioButton3_CheckedChanged(object sender, EventArgs e)
         {
-            ApplyGreenYellowTheme();
+            TertiaryColorTheme();
         }
 
-
-        
-        private void BtnCalculate_Click(object sender, EventArgs e)
-        {
-            //this.Hide();
-            // show form progress
-            using (FormProgress formProgress = new FormProgress())
-            {
-                formProgress.ShowDialog();
-            }
-            
-        }
+        #endregion
+        /***************************************** Settings End *****************************************/
 
 
-        // Select invoices folder from using
+        // Folder select button click
+
         private void BtnFolderSelect_Click(object sender, EventArgs e)
         {
 
@@ -368,6 +410,116 @@ TextShade.WHITE);
             }
             
 
+        }
+
+
+
+
+
+        // ***** HEsaplama sonrasi formu yenile *****
+
+        private void BtnCalculate_Click(object sender, EventArgs e)
+        {
+            OpenFormProgress();
+        }
+
+        #region RefreshMainForm
+        private void OpenFormProgress()
+        {
+            FormProgress formProgress = new FormProgress();
+            // evente metod at
+            formProgress.ProgressCompleted += FormProgress_ProgressCompleted;
+
+            formProgress.ShowDialog();
+
+            // event isleyiciyi kaldir
+            formProgress.ProgressCompleted -= FormProgress_ProgressCompleted;
+
+
+            formProgress.Dispose();
+        }
+
+        // Event tetiklendiğinde çağrılacak metod
+        private void FormProgress_ProgressCompleted(object sender, EventArgs e)
+        {
+            // Burada FormMain'i yenileyebilirsiniz
+            RefreshMainForm();
+        }
+
+        private void RefreshMainForm()
+        {
+            pdfFiles = null;
+            txtBoxFolderPath.Clear();
+            BtnCalculate.Enabled = false;
+            labelPtInfo.Text = "**Öncelikle Faturaların Bulunduğu Klasörü Seçmelisiniz.";
+        }
+
+
+
+
+
+        #endregion
+
+
+
+
+        #region Statistic
+
+       
+
+
+        
+        #endregion
+
+        
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Excel Files|*.xlsx;*.xlsm;*.xls";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                var filePath = openFileDialog.FileName;
+                PaketTaxiStatistics statistics = new PaketTaxiStatistics();
+                var models = statistics.ReadExcelFile(filePath);
+
+                // PieChart'ı doldur
+                pieChart1.Series = statistics.CreatePieChart(models);
+
+                // StackedColumn grafiğini doldur
+                
+                cartesianChart1.Series = statistics.CreateStackedColumnForCommissionsAndFees(models);
+
+                // X Ekseni için müşteri isimlerini ayarla
+                //cartesianChart1.AxisX[0].Labels = models.Select(x => x.nameSurname).ToList();
+
+                // Y Ekseni için komisyon ve aidat miktarlarını ayarla
+                //cartesianChart1.AxisY[0].LabelFormatter = value => value.ToString("C");
+
+                // SolidGauge'ı doldur
+                double averageAbove = statistics.CalculateAverageCommissionAbove(models);
+                solidGauge1.From = 0;
+                solidGauge1.To = models.Count;
+                solidGauge1.Value = averageAbove;
+                solidGauge1.LabelFormatter = val => val + " kişi ortalamanın üstünde";
+
+                // materialListView1'ı doldur
+                materialListView1.Items.Clear();
+                materialListView1.Columns.Clear();
+                materialListView1.Columns.Add("Ad Soyad");
+                materialListView1.Columns.Add("Fatura Tutarı");
+                materialListView1.Columns.Add("Aidat Miktarı");
+                materialListView1.Columns.Add("KomisyonMiktarı");
+                foreach (var model in models)
+                {
+                    var item = new ListViewItem();
+                    item.SubItems[0].Text=model.nameSurname;
+                    item.SubItems.Add(model.tInvoice.ToString());
+                    item.SubItems.Add(model.fee.ToString());
+                    item.SubItems.Add(model.commission.ToString());
+                    materialListView1.Items.Add(item);
+                }
+            }
         }
     }
 }

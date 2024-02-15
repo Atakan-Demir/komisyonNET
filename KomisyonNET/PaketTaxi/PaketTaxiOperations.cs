@@ -168,7 +168,7 @@ namespace KomisyonNET.PaketTaxi
             return paketTaxiModels;
         }
         */
-        public async Task<List<PaketTaxiModel>> ExtractPdf(string[] pdfFiles, IProgress<(int progress, string message)> progress)
+        public async Task<List<PaketTaxiModel>> ExtractPdf(string[] pdfFiles, IProgress<(int progress, string message)> progress, IProgress<(int progress, string message,List<string> errpath)> progressError)
         {
             List<PaketTaxiModel> paketTaxiModels = new List<PaketTaxiModel>();
             List<string> errorPath = new List<string>();
@@ -204,13 +204,26 @@ namespace KomisyonNET.PaketTaxi
 
                 if (model != null)
                 {
-                    paketTaxiModels.Add(model);
+                    if (model.tInvoice != 0)
+                    {
+                           // add model
+                        paketTaxiModels.Add(model);
+                    }
+                    else
+                    {
+                        // add error path
+                        errorPath.Add(pdfFiles[i]);
+                    }
+                    
                 }
+                //hatalı fatura sayısını rapor et
+                progressError.Report((errorPath.Count, $"Hatalı Fatura Sayısı: {errorPath.Count}/{pdfFiles.Length}",errorPath));
+
 
                 // İlerlemeyi rapor et
-                progress.Report((i + 1, $"Faturalar Okunuyor ({i + 1} / {pdfFiles.Length})"));
+                progress.Report((i + 1, $"Faturalar İşleniyor ({i + 1} / {pdfFiles.Length})"));
 
-                await Task.Delay(50); 
+                //await Task.Delay(0);
             }
 
             return paketTaxiModels;
@@ -286,7 +299,7 @@ namespace KomisyonNET.PaketTaxi
             string dateTime = DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
 
 
-            string path = conf.GetExportPath() + @"\" + dateTime + @" KomisyonNET.xlsx";
+            string path = conf.GetExportPath() + @"\KomisyonNET " + dateTime + @".xlsx";
 
             using (var workbook = new XLWorkbook())
             {
@@ -324,10 +337,10 @@ namespace KomisyonNET.PaketTaxi
         }
 
 
-        public async Task CreateExcelTableAsync(List<PaketTaxiModel> models, IProgress<(int, string)> progress)
+        public async Task<string> CreateExcelTableAsync(List<PaketTaxiModel> models, IProgress<(int, string)> progress)
         {
             string dateTime = DateTime.Now.ToString("dd-MM-yyyy HH-mm-ss");
-            string path = conf.GetExportPath() + @"\" + dateTime + @" KomisyonNET.xlsx";
+            string path = conf.GetExportPath() + @"\KomisyonNET " + dateTime + @".xlsx";
 
             using (var workbook = new XLWorkbook())
             {
@@ -351,7 +364,7 @@ namespace KomisyonNET.PaketTaxi
                     progress.Report((i + 1, $"Faturalar Yazılıyor ({i + 1} / {models.Count})"));
 
 
-                    await Task.Delay(500);
+                    await Task.Delay(10);
                 }
 
 
@@ -360,6 +373,8 @@ namespace KomisyonNET.PaketTaxi
                 var table = range.CreateTable();
 
                 workbook.SaveAs(path);
+
+                return path;
             }
         }
 
