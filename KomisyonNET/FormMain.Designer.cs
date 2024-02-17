@@ -104,14 +104,22 @@
             this.materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
             this.ımageListSideNav = new System.Windows.Forms.ImageList(this.components);
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.elementHost3 = new System.Windows.Forms.Integration.ElementHost();
+            this.cartesianChart1 = new LiveCharts.Wpf.CartesianChart();
+            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.colNameSurname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTInvoice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colFee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colCommission = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.solidGauge1 = new LiveCharts.WinForms.SolidGauge();
+            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
+            this.cartesianChart2 = new LiveCharts.Wpf.CartesianChart();
+            this.materialCard7 = new MaterialSkin.Controls.MaterialCard();
             this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
             this.pieChart1 = new LiveCharts.Wpf.PieChart();
             this.button1 = new System.Windows.Forms.Button();
-            this.materialCard7 = new MaterialSkin.Controls.MaterialCard();
-            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
-            this.cartesianChart1 = new LiveCharts.Wpf.CartesianChart();
-            this.solidGauge1 = new LiveCharts.WinForms.SolidGauge();
-            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.materialTabControl1.SuspendLayout();
             this.homePage.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -126,7 +134,6 @@
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
-            this.statisticPage.SuspendLayout();
             this.settingsPage.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -144,7 +151,9 @@
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.materialCard7.SuspendLayout();
+            this.tableLayoutPanel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -153,6 +162,7 @@
             this.materialTabControl1.Controls.Add(this.pTaxiPage);
             this.materialTabControl1.Controls.Add(this.statisticPage);
             this.materialTabControl1.Controls.Add(this.settingsPage);
+            this.materialTabControl1.Controls.Add(this.tabPage1);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.ımageListSideNav;
@@ -676,11 +686,6 @@
             // statisticPage
             // 
             this.statisticPage.AutoScroll = true;
-            this.statisticPage.Controls.Add(this.materialListView1);
-            this.statisticPage.Controls.Add(this.solidGauge1);
-            this.statisticPage.Controls.Add(this.elementHost2);
-            this.statisticPage.Controls.Add(this.materialCard7);
-            this.statisticPage.Controls.Add(this.button1);
             this.statisticPage.ImageKey = "icons8-statistics-32.png";
             this.statisticPage.Location = new System.Drawing.Point(4, 39);
             this.statisticPage.Name = "statisticPage";
@@ -798,7 +803,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.30802F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.69199F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel5.Controls.Add(this.txtBoxExportPath, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.BtnExportPath, 0, 1);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 108);
@@ -825,7 +830,7 @@
             this.txtBoxExportPath.Multiline = false;
             this.txtBoxExportPath.Name = "txtBoxExportPath";
             this.txtBoxExportPath.ReadOnly = true;
-            this.txtBoxExportPath.Size = new System.Drawing.Size(329, 50);
+            this.txtBoxExportPath.Size = new System.Drawing.Size(328, 50);
             this.txtBoxExportPath.TabIndex = 0;
             this.txtBoxExportPath.Text = "";
             this.txtBoxExportPath.TrailingIcon = null;
@@ -1112,7 +1117,7 @@
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.09091F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.90909F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 44F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel8.Controls.Add(this.materialLabel8, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.mComboBoxLanguage, 1, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 73);
@@ -1161,7 +1166,7 @@
             this.mComboBoxLanguage.MaximumSize = new System.Drawing.Size(190, 0);
             this.mComboBoxLanguage.MouseState = MaterialSkin.MouseState.OUT;
             this.mComboBoxLanguage.Name = "mComboBoxLanguage";
-            this.mComboBoxLanguage.Size = new System.Drawing.Size(108, 49);
+            this.mComboBoxLanguage.Size = new System.Drawing.Size(107, 49);
             this.mComboBoxLanguage.StartIndex = 0;
             this.mComboBoxLanguage.TabIndex = 1;
             // 
@@ -1484,76 +1489,145 @@
             this.ımageListSideNav.Images.SetKeyName(2, "icons8-statistics-32.png");
             this.ımageListSideNav.Images.SetKeyName(3, "icons8-taxi-32.png");
             // 
-            // elementHost1
+            // tabPage1
             // 
-            this.elementHost1.Location = new System.Drawing.Point(38, 52);
-            this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(261, 198);
-            this.elementHost1.TabIndex = 0;
-            this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.pieChart1;
+            this.tabPage1.Controls.Add(this.tableLayoutPanel19);
+            this.tabPage1.Controls.Add(this.elementHost3);
+            this.tabPage1.Controls.Add(this.solidGauge1);
+            this.tabPage1.Controls.Add(this.materialCard7);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 39);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(889, 621);
+            this.tabPage1.TabIndex = 4;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // elementHost3
             // 
-            this.button1.Location = new System.Drawing.Point(290, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // materialCard7
-            // 
-            this.materialCard7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard7.Controls.Add(this.elementHost1);
-            this.materialCard7.Depth = 0;
-            this.materialCard7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard7.Location = new System.Drawing.Point(536, 27);
-            this.materialCard7.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard7.Name = "materialCard7";
-            this.materialCard7.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard7.Size = new System.Drawing.Size(325, 303);
-            this.materialCard7.TabIndex = 2;
-            // 
-            // elementHost2
-            // 
-            this.elementHost2.Location = new System.Drawing.Point(47, 163);
-            this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(418, 213);
-            this.elementHost2.TabIndex = 3;
-            this.elementHost2.Text = "elementHost2";
-            this.elementHost2.Child = this.cartesianChart1;
-            // 
-            // solidGauge1
-            // 
-            this.solidGauge1.Location = new System.Drawing.Point(31, 27);
-            this.solidGauge1.Name = "solidGauge1";
-            this.solidGauge1.Size = new System.Drawing.Size(200, 100);
-            this.solidGauge1.TabIndex = 4;
-            this.solidGauge1.Text = "solidGauge1";
+            this.elementHost3.Location = new System.Drawing.Point(333, 206);
+            this.elementHost3.Name = "elementHost3";
+            this.elementHost3.Size = new System.Drawing.Size(109, 171);
+            this.elementHost3.TabIndex = 12;
+            this.elementHost3.Text = "elementHost3";
+            this.elementHost3.Child = this.cartesianChart1;
             // 
             // materialListView1
             // 
             this.materialListView1.AutoSizeTable = false;
             this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialListView1.CheckBoxes = true;
+            this.materialListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colNameSurname,
+            this.colTInvoice,
+            this.colFee,
+            this.colCommission});
             this.materialListView1.Depth = 0;
-            this.materialListView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.materialListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HideSelection = false;
-            this.materialListView1.Location = new System.Drawing.Point(0, 382);
+            this.materialListView1.Location = new System.Drawing.Point(28, 3);
             this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
             this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
             this.materialListView1.Name = "materialListView1";
             this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(889, 239);
-            this.materialListView1.TabIndex = 5;
+            this.materialListView1.Size = new System.Drawing.Size(825, 197);
+            this.materialListView1.TabIndex = 11;
             this.materialListView1.UseCompatibleStateImageBehavior = false;
             this.materialListView1.View = System.Windows.Forms.View.Details;
+            // 
+            // colNameSurname
+            // 
+            this.colNameSurname.Text = "Ad Soyad";
+            this.colNameSurname.Width = 200;
+            // 
+            // colTInvoice
+            // 
+            this.colTInvoice.Text = "Fatura Tutarı";
+            this.colTInvoice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colTInvoice.Width = 200;
+            // 
+            // colFee
+            // 
+            this.colFee.Text = "Aidat Tutarı";
+            this.colFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colFee.Width = 200;
+            // 
+            // colCommission
+            // 
+            this.colCommission.Text = "Komisyon Miktarı";
+            this.colCommission.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colCommission.Width = 200;
+            // 
+            // solidGauge1
+            // 
+            this.solidGauge1.Location = new System.Drawing.Point(-4, 6);
+            this.solidGauge1.Name = "solidGauge1";
+            this.solidGauge1.Size = new System.Drawing.Size(164, 78);
+            this.solidGauge1.TabIndex = 10;
+            this.solidGauge1.Text = "solidGauge1";
+            // 
+            // elementHost2
+            // 
+            this.elementHost2.Location = new System.Drawing.Point(17, 161);
+            this.elementHost2.Name = "elementHost2";
+            this.elementHost2.Size = new System.Drawing.Size(112, 171);
+            this.elementHost2.TabIndex = 9;
+            this.elementHost2.Text = "elementHost2";
+            this.elementHost2.Child = this.cartesianChart2;
+            // 
+            // materialCard7
+            // 
+            this.materialCard7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard7.Controls.Add(this.elementHost1);
+            this.materialCard7.Controls.Add(this.elementHost2);
+            this.materialCard7.Depth = 0;
+            this.materialCard7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard7.Location = new System.Drawing.Point(483, 28);
+            this.materialCard7.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard7.Name = "materialCard7";
+            this.materialCard7.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard7.Size = new System.Drawing.Size(381, 332);
+            this.materialCard7.TabIndex = 8;
+            // 
+            // elementHost1
+            // 
+            this.elementHost1.Location = new System.Drawing.Point(135, 17);
+            this.elementHost1.Name = "elementHost1";
+            this.elementHost1.Size = new System.Drawing.Size(229, 192);
+            this.elementHost1.TabIndex = 0;
+            this.elementHost1.Text = "elementHost1";
+            this.elementHost1.Child = this.pieChart1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(271, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // tableLayoutPanel19
+            // 
+            this.tableLayoutPanel19.ColumnCount = 3;
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.941176F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.11765F));
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.941176F));
+            this.tableLayoutPanel19.Controls.Add(this.materialListView1, 1, 0);
+            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 415);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            this.tableLayoutPanel19.RowCount = 1;
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(883, 203);
+            this.tableLayoutPanel19.TabIndex = 13;
             // 
             // FormMain
             // 
@@ -1588,7 +1662,6 @@
             this.tableLayoutPanel13.PerformLayout();
             this.tableLayoutPanel14.ResumeLayout(false);
             this.tableLayoutPanel14.PerformLayout();
-            this.statisticPage.ResumeLayout(false);
             this.settingsPage.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
@@ -1616,7 +1689,9 @@
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel18.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.materialCard7.ResumeLayout(false);
+            this.tableLayoutPanel19.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1697,14 +1772,22 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel21;
         private MaterialSkin.Controls.MaterialLabel materialLabel20;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Integration.ElementHost elementHost3;
+        private LiveCharts.Wpf.CartesianChart cartesianChart1;
+        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private System.Windows.Forms.ColumnHeader colNameSurname;
+        private System.Windows.Forms.ColumnHeader colTInvoice;
+        private System.Windows.Forms.ColumnHeader colFee;
+        private System.Windows.Forms.ColumnHeader colCommission;
+        private LiveCharts.WinForms.SolidGauge solidGauge1;
+        private System.Windows.Forms.Integration.ElementHost elementHost2;
+        private LiveCharts.Wpf.CartesianChart cartesianChart2;
+        private MaterialSkin.Controls.MaterialCard materialCard7;
         private System.Windows.Forms.Integration.ElementHost elementHost1;
         private LiveCharts.Wpf.PieChart pieChart1;
-        private MaterialSkin.Controls.MaterialCard materialCard7;
-        private System.Windows.Forms.Integration.ElementHost elementHost2;
-        private LiveCharts.Wpf.CartesianChart cartesianChart1;
-        private LiveCharts.WinForms.SolidGauge solidGauge1;
-        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
     }
 }
 

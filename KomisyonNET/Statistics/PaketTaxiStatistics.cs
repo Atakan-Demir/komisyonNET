@@ -80,23 +80,25 @@ namespace KomisyonNET.Statistics
             double totalFee = models.Sum(x => x.fee);
             double totalCom = models.Sum(x => x.commission);
 
-            return new SeriesCollection{
-
-                new PieSeries
-                {
-                    Title = "Aidat",
-                    Values = new ChartValues<double> { totalFee },
-                    DataLabels = true,
-                    LabelPoint = chartPoint => string.Format("{0:N2}", chartPoint.Y)
-                },
-                new PieSeries
-                {
-                    Title = "Komisyon",
-                    Values = new ChartValues<double> { totalCom },
-                    DataLabels = true,
-                    LabelPoint = chartPoint => string.Format("{0:N2}", chartPoint.Y)
-                }
-            };
+            return new SeriesCollection
+    {
+        new PieSeries
+        {
+            Title = "Aidat",
+            Values = new ChartValues<double> { totalFee },
+            DataLabels = true,
+            LabelPoint = chartPoint => string.Format("{0:N2}", chartPoint.Y),
+            //Fill = System.Windows.Media.Brushes.Green
+        },
+        new PieSeries
+        {
+            Title = "Komisyon",
+            Values = new ChartValues<double> { totalCom },
+            DataLabels = true,
+            LabelPoint = chartPoint => string.Format("{0:N2}", chartPoint.Y),
+            Fill = System.Windows.Media.Brushes.Orange 
+        }
+    };
         }
 
         public SeriesCollection CreateStackedArea(List<PaketTaxiModel> models)
@@ -163,31 +165,57 @@ namespace KomisyonNET.Statistics
         }
         public SeriesCollection CreateStackedColumnForCommissionsAndFees(List<PaketTaxiModel> models)
         {
-            var seriesCollection = new SeriesCollection();
-
-            // Komisyon serisi
-            var commissionSeries = new ColumnSeries
+            var totalFee = models.Sum(x => x.fee);
+            var totalCommission = models.Sum(x => x.commission);
+            var feeSeries = new StackedColumnSeries
             {
-                Title = "Komisyon",
-                Values = new ChartValues<double>(models.Select(x => x.commission)),
+                Title = "Aidat",
+                Values = new ChartValues<double>{ totalFee } ,
                 DataLabels = true,
-                LabelPoint = point => $"Komisyon: {point.Y:C}"
+                //Fill = System.Windows.Media.Brushes.Blue 
+                LabelPoint = chartPoint => string.Format("{0:N2}", chartPoint.Y),
             };
 
-            // Aidat serisi
+            var commissionSeries = new StackedColumnSeries
+            {
+                Title = "Komisyon",
+                Values = new ChartValues<double> { totalCommission },
+                DataLabels = true,
+                Fill = System.Windows.Media.Brushes.Orange, // Komisyon için turuncu renk
+                LabelPoint = chartPoint => string.Format("{0:N2}", chartPoint.Y),
+            };
+
+            return new SeriesCollection { feeSeries, commissionSeries };
+        }
+
+        public SeriesCollection CM(List<PaketTaxiModel> models)
+        {
+            var totalFee = models.Sum(x => x.fee);
+            var totalCommission = models.Sum(x => x.commission);
             var feeSeries = new ColumnSeries
             {
                 Title = "Aidat",
-                Values = new ChartValues<double>(models.Select(x => x.fee)),
+                Values = new ChartValues<double> { totalFee },
+                
                 DataLabels = true,
-                LabelPoint = point => $"Aidat: {point.Y:C}"
+                //Fill = System.Windows.Media.Brushes.Blue 
+                LabelPoint = chartPoint => string.Format("{0:N2}", chartPoint.Y),
+                
             };
 
-            seriesCollection.Add(commissionSeries);
-            seriesCollection.Add(feeSeries);
+            var commissionSeries = new ColumnSeries
+            {
+                Title = "Komisyon",
+                Values = new ChartValues<double> { totalCommission },
+                
+                DataLabels = true,
+                Fill = System.Windows.Media.Brushes.Orange, // Komisyon için turuncu renk
+                LabelPoint = chartPoint => string.Format("{0:N2}", chartPoint.Y),
+            };
 
-            return seriesCollection;
+            return new SeriesCollection { feeSeries, commissionSeries };
         }
+
         public double CalculateAverageCommissionAbove(List<PaketTaxiModel> models)
         {
             double averageCommission = models.Average(x => x.commission);

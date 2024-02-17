@@ -473,7 +473,9 @@ TextShade.WHITE);
 
         
 
-        private void button1_Click_1(object sender, EventArgs e)
+       
+
+        private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Excel Files|*.xlsx;*.xlsm;*.xls";
@@ -486,15 +488,16 @@ TextShade.WHITE);
                 // PieChart'ı doldur
                 pieChart1.Series = statistics.CreatePieChart(models);
 
+
+
                 // StackedColumn grafiğini doldur
-                
                 cartesianChart1.Series = statistics.CreateStackedColumnForCommissionsAndFees(models);
 
-                // X Ekseni için müşteri isimlerini ayarla
-                //cartesianChart1.AxisX[0].Labels = models.Select(x => x.nameSurname).ToList();
+                // Column grafiğini doldur
+                cartesianChart2.Series = statistics.CM(models);
+                cartesianChart2.AxisY.Clear();
+                cartesianChart2.AxisX.Clear();
 
-                // Y Ekseni için komisyon ve aidat miktarlarını ayarla
-                //cartesianChart1.AxisY[0].LabelFormatter = value => value.ToString("C");
 
                 // SolidGauge'ı doldur
                 double averageAbove = statistics.CalculateAverageCommissionAbove(models);
@@ -505,15 +508,11 @@ TextShade.WHITE);
 
                 // materialListView1'ı doldur
                 materialListView1.Items.Clear();
-                materialListView1.Columns.Clear();
-                materialListView1.Columns.Add("Ad Soyad");
-                materialListView1.Columns.Add("Fatura Tutarı");
-                materialListView1.Columns.Add("Aidat Miktarı");
-                materialListView1.Columns.Add("KomisyonMiktarı");
+                
                 foreach (var model in models)
                 {
                     var item = new ListViewItem();
-                    item.SubItems[0].Text=model.nameSurname;
+                    item.SubItems[0].Text = model.nameSurname;
                     item.SubItems.Add(model.tInvoice.ToString());
                     item.SubItems.Add(model.fee.ToString());
                     item.SubItems.Add(model.commission.ToString());
