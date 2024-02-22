@@ -21,6 +21,11 @@ using DocumentFormat.OpenXml.Drawing.Charts;
 using LiveCharts.WinForms;
 using LiveCharts.Wpf;
 using LiveCharts.Definitions.Charts;
+using System.Windows;
+using Series = LiveCharts.Wpf.Series;
+using DocumentFormat.OpenXml.Office2016.Drawing.ChartDrawing;
+using System.Windows.Data;
+using MessageBox = System.Windows.Forms.MessageBox;
 namespace KomisyonNET
 {
     public partial class FormMain : MaterialForm
@@ -40,23 +45,29 @@ namespace KomisyonNET
         // MaterialSkinManager
         MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
 
-        // get username
-        private string userName = Environment.UserName;
-        //private string exportPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+        // cup
         private string folderPath;
+        List<PaketTaxiModel> statisticModels = new List<PaketTaxiModel>();
 
 
 
-        // constructor
+        // statistics
+        private string statisticsPath;
+        PaketTaxiStatistics statistics = new PaketTaxiStatistics();
+
+
+        // operations
         PaketTaxiOperations ptOperations = new PaketTaxiOperations();
         public static string[] pdfFiles;
-        
+
+
+
 
         public FormMain()
         {
             InitializeComponent();
 
-            
+
 
             if (conf.GetIsFt())
             {
@@ -70,7 +81,7 @@ namespace KomisyonNET
             }
 
             materialSkinManager.AddFormToManage(this);
-            
+
 
 
 
@@ -81,10 +92,19 @@ namespace KomisyonNET
             AddEventHandlers();
 
             BtnSave.Enabled = false;
-  
+
+
+            // solid gauge
+            /*
+            solidGauge1.Value = 0;
+            solidGauge1.From = 0;
+            solidGauge1.To = 100;
+            solidGauge1.LabelFormatter = value => "0%";
+            */
+
         }
 
- 
+
 
         /***************************************** Settings Start *****************************************/
         #region Settings
@@ -155,16 +175,34 @@ namespace KomisyonNET
 
             conf.SetExportPath(txtBoxExportPath.Text);
 
-            if (MaskTxtBoxFee.Text != "")
+            if (MaskTxtBoxFee.Text == "" || !double.TryParse(MaskTxtBoxFee.Text, out double fee))
             {
-               conf.SetFee(Convert.ToDouble(MaskTxtBoxFee.Text));
+
+                MessageBox.Show("Lütfen geçerli bir ücret giriniz.\nÖrnek :\n Aidat - 500", "Girilen Değerde Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
             }
-            
-            if (MaskTxtBoxComm.Text != "")
+            else
             {
-               conf.SetCom(Convert.ToDouble(MaskTxtBoxComm.Text));
+
+                conf.SetFee(Convert.ToDouble(MaskTxtBoxFee.Text));
+
             }
-            
+
+            if (MaskTxtBoxComm.Text == "" || !double.TryParse(MaskTxtBoxComm.Text, out double commission))
+            {
+
+                MessageBox.Show("Lütfen geçerli bir komisyon giriniz.\nÖrnek :\n Komisyon - 10,5", "Girilen Değerde Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+
+            }
+            else
+            {
+
+                conf.SetCom(Convert.ToDouble(MaskTxtBoxComm.Text));
+
+            }
+
 
             if (mComboBoxLanguage.SelectedIndex == 0)
             {
@@ -229,6 +267,8 @@ namespace KomisyonNET
             // watch for keypress
             MaskTxtBoxFee.KeyPress += new KeyPressEventHandler(MaskTxtBoxFee_KeyPress);
             MaskTxtBoxComm.KeyPress += new KeyPressEventHandler(MaskTxtBoxComm_KeyPress);
+            MaskTxtBoxNewFee.KeyPress += new KeyPressEventHandler(MaskTxtBoxFee_KeyPress);
+            MaskTxtBoxNewComm.KeyPress += new KeyPressEventHandler(MaskTxtBoxComm_KeyPress);
         }
 
 
@@ -243,17 +283,17 @@ namespace KomisyonNET
 
         private void MaskTxtBoxFee_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
-                SystemSounds.Beep.Play(); 
+                SystemSounds.Beep.Play();
             }
         }
 
         private void MaskTxtBoxComm_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
+
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != ',' && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
@@ -298,7 +338,7 @@ namespace KomisyonNET
         {
             // if checked
             if (themeSwitch.Checked)
-            {    
+            {
 
                 this.materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
 
@@ -315,47 +355,47 @@ namespace KomisyonNET
             }
         }
 
-        
 
-        
-       
 
-        
+
+
+
+
 
         /*****************/
         public void SeconderyColorTheme()
         {
-            
+
             materialSkinManager.ColorScheme = new ColorScheme(// Teal & Amber Tema
-unchecked((Primary)0xFF009688), // Primary
-unchecked((Primary)0xFF00796B), // Dark Primary
-unchecked((Primary)0xFFB2DFDB), // Light Primary
-unchecked((Accent)0xFFFFC107),  // Accent
-TextShade.WHITE                 // Text Color
-);
-           
+                unchecked((Primary)0xFF009688), // Primary
+                unchecked((Primary)0xFF00796B), // Dark Primary
+                unchecked((Primary)0xFFB2DFDB), // Light Primary
+                unchecked((Accent)0xFFFFC107),  // Accent
+                TextShade.WHITE                 // Text Color
+                );
+
         }
         public void PrimaryColorTheme()
         {
             materialSkinManager.ColorScheme = new ColorScheme(
-// Koyu Mavi & Pembe Tema
-unchecked((Primary)0xFF303F9F), // Primary
-unchecked((Primary)0xFF3F51B5), // Dark Primary
-unchecked((Primary)0xFFC5CAE9), // Light Primary
-unchecked((Accent)0xFFFF4081),  // Accent
-TextShade.WHITE                 // Text Color
-                );
-            
+                // Koyu Mavi & Pembe Tema
+                unchecked((Primary)0xFF303F9F), // Primary
+                unchecked((Primary)0xFF3F51B5), // Dark Primary
+                unchecked((Primary)0xFFC5CAE9), // Light Primary
+                unchecked((Accent)0xFFFF4081),  // Accent
+                TextShade.WHITE                 // Text Color
+                                );
+
         }
         public void TertiaryColorTheme()
         {
             materialSkinManager.ColorScheme = new ColorScheme(// Deep Purple & Lime Tema
-unchecked((Primary)0xFF673AB7), // Primary
-unchecked((Primary)0xFF512DA8), // Dark Primary
-unchecked((Primary)0xFFD1C4E9), // Light Primary
-unchecked((Accent)0xFFCDDC39),  // Accent
-TextShade.WHITE);
-            
+                unchecked((Primary)0xFF673AB7), // Primary
+                unchecked((Primary)0xFF512DA8), // Dark Primary
+                unchecked((Primary)0xFFD1C4E9), // Light Primary
+                unchecked((Accent)0xFFCDDC39),  // Accent
+                TextShade.WHITE);
+
         }
 
         /*****************/
@@ -363,7 +403,7 @@ TextShade.WHITE);
         // material radio button color change
         private void materialRadioButton2_CheckedChanged(object sender, EventArgs e)
         {
-           PrimaryColorTheme();
+            PrimaryColorTheme();
         }
 
         private void materialRadioButton1_CheckedChanged(object sender, EventArgs e)
@@ -389,7 +429,7 @@ TextShade.WHITE);
             txtBoxFolderPath.Text = folderPath;
             if (folderPath != null)
             {
-                pdfFiles=ptOperations.getPdfFiles(folderPath);
+                pdfFiles = ptOperations.getPdfFiles(folderPath);
 
                 if (pdfFiles != null)
                 {
@@ -406,9 +446,9 @@ TextShade.WHITE);
                 {
                     labelPtInfo.Text = "** Fatura Bulunamadı!!";
                 }
-                
+
             }
-            
+
 
         }
 
@@ -439,10 +479,9 @@ TextShade.WHITE);
             formProgress.Dispose();
         }
 
-        // Event tetiklendiğinde çağrılacak metod
+        // tetiklenince formu yenile
         private void FormProgress_ProgressCompleted(object sender, EventArgs e)
         {
-            // Burada FormMain'i yenileyebilirsiniz
             RefreshMainForm();
         }
 
@@ -465,60 +504,197 @@ TextShade.WHITE);
 
         #region Statistic
 
-       
 
 
-        
+
+
         #endregion
 
-        
 
-       
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+
+
+        private void mRadioBtnColumn_CheckedChanged(object sender, EventArgs e)
+        {
+            cartesianChart1.Series = null;
+            var models = statistics.ReadExcelFile(statisticsPath);
+            if (models != null)
+            {
+                cartesianChart1.Series = statistics.OrderedColumn(models);
+            }
+
+        }
+
+        private void mRadioBtnStacked_CheckedChanged(object sender, EventArgs e)
+        {
+            cartesianChart1.Series = null;
+            var models = statistics.ReadExcelFile(statisticsPath);
+            if (models != null)
+            {
+                cartesianChart1.Series = statistics.StackedColumn(models);
+            }
+
+        }
+
+        private void mBtnFileSelect_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Excel Files|*.xlsx;*.xlsm;*.xls";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                var filePath = openFileDialog.FileName;
-                PaketTaxiStatistics statistics = new PaketTaxiStatistics();
-                var models = statistics.ReadExcelFile(filePath);
+                mBtnCalculateStatistic.Enabled = true;
+
+
+                statisticsPath = openFileDialog.FileName;
+
+                mBtnFileSelect.Text = "Değiştir";
+            }
+        }
+        private void mBtnCalculateStatistic_Click(object sender, EventArgs e)
+        {
+
+            mBtnFileSelect.Text = "Dosya Seç";
+            mBtnFileSelect.Enabled = false;
+            mBtnClear.Enabled = true;
+            mCbxPreview.Enabled = true;
+            tableLayoutPanelRadio.Enabled = true;
+
+            statisticModels = statistics.ReadExcelFile(statisticsPath);
+
+            if (statisticModels != null)
+            {
+                mLabelTInvoice.Text = statistics.TotalInvoice(statisticModels).ToString("N2");
+                mLabelTProfit.Text = statistics.TotalProfit(statisticModels).ToString("N2");
 
                 // PieChart'ı doldur
-                pieChart1.Series = statistics.CreatePieChart(models);
-
-
+                pieChart1.Series = statistics.PieChart(statisticModels);
 
                 // StackedColumn grafiğini doldur
-                cartesianChart1.Series = statistics.CreateStackedColumnForCommissionsAndFees(models);
-
-                // Column grafiğini doldur
-                cartesianChart2.Series = statistics.CM(models);
-                cartesianChart2.AxisY.Clear();
-                cartesianChart2.AxisX.Clear();
+                cartesianChart1.Series = statistics.StackedColumn(statisticModels);
 
 
-                // SolidGauge'ı doldur
-                double averageAbove = statistics.CalculateAverageCommissionAbove(models);
-                solidGauge1.From = 0;
-                solidGauge1.To = models.Count;
-                solidGauge1.Value = averageAbove;
-                solidGauge1.LabelFormatter = val => val + " kişi ortalamanın üstünde";
+
 
                 // materialListView1'ı doldur
-                materialListView1.Items.Clear();
-                
-                foreach (var model in models)
+                mListViewTable.Items.Clear();
+                var p = statistics.TotalProfit(statisticModels);
+                foreach (var model in statisticModels)
                 {
                     var item = new ListViewItem();
                     item.SubItems[0].Text = model.nameSurname;
                     item.SubItems.Add(model.tInvoice.ToString());
                     item.SubItems.Add(model.fee.ToString());
                     item.SubItems.Add(model.commission.ToString());
-                    materialListView1.Items.Add(item);
+                    item.SubItems.Add((model.fee + model.commission).ToString());
+                    item.SubItems.Add(((model.fee + model.commission) / p * 100).ToString("N6"));
+                    mListViewTable.Items.Add(item);
                 }
+
+                mBtnCalculateStatistic.Enabled = false;
             }
+
+
+        }
+        // Steacked Column Basic Column change
+        private void materialCheckbox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (mCbxPreview.Checked)
+            {
+                mCardPreview.Enabled = true;
+                solidGauge1.Visible = true;
+            }
+            else
+            {
+                mCardPreview.Enabled = false;
+                //solidGauge1.Visible = false;
+            }
+        }
+
+        private void mBtnClear_Click(object sender, EventArgs e)
+        {
+            statisticsPath = "";
+            if (statisticModels != null)
+            {
+                statisticModels.Clear();
+            }
+
+
+            mLabelTInvoice.Text = "0,00";
+            mLabelTProfit.Text = "0,00";
+            pieChart1.Series = null;
+            mRadioBtnStacked.Checked = true;
+            cartesianChart1.Series = null;
+            tableLayoutPanelRadio.Enabled = false;
+            mListViewTable.Items.Clear();
+            MaskTxtBoxNewFee.Text = "";
+            MaskTxtBoxNewComm.Text = "";
+            solidGauge1.Value = 0;
+            //solidGauge1.Visible = false;
+
+
+
+            mCardPreview.Enabled = false;
+            mCbxPreview.Checked = false;
+            mCbxPreview.Enabled = false;
+            mBtnFileSelect.Enabled = true;
+
+
+            mBtnClear.Enabled = false;
+
+
+        }
+
+        private void mBtnPreview_Click(object sender, EventArgs e)
+        {
+            //clear solid gauge
+            
+
+            double oldIncome = statistics.TotalProfit(statisticModels);
+            // check if new fee and commission is empty or not double
+            if (MaskTxtBoxNewFee.Text == "" || MaskTxtBoxNewComm.Text == "" || !double.TryParse(MaskTxtBoxNewFee.Text, out double fee) || !double.TryParse(MaskTxtBoxNewComm.Text, out double comm))
+            {
+                MessageBox.Show("Lütfen geçerli bir ücret ve komisyon giriniz.\nÖrnek :\n Aidat - 500\n Komisyon - 10,5", "Girilen Değerlerde Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                List<PaketTaxiModel> statisticModelsPreview = new List<PaketTaxiModel>(statisticModels);
+
+                double newIncome = statistics.UpdateFeesAndCommissions(statisticModelsPreview, Convert.ToDouble(MaskTxtBoxNewFee.Text), Convert.ToDouble(MaskTxtBoxNewComm.Text));
+
+                double percentageChange = statistics.CalculatePercentageChange(oldIncome, newIncome);
+
+                // UI thread'inde SolidGauge güncelle
+                
+                //this.Invoke((MethodInvoker)delegate
+                //{
+                //    labelTest.Text = $"Eski: {oldIncome:N2} Yeni: {newIncome:N2} Yüzde: {percentageChange:N2}%";
+                //    SolidGauge solidG = statistics.UpdateSolidGauge(percentageChange);
+                //    solidGauge1.From = solidG.From;
+                //    solidGauge1.To = solidG.To;
+                //    solidGauge1.FromColor = solidG.FromColor;
+                //    solidGauge1.ToColor = solidG.ToColor;
+                //    solidGauge1.Base.LabelsVisibility = solidG.Base.LabelsVisibility;
+                //    solidGauge1.Base.Foreground = solidG.Base.Foreground;
+                //    solidGauge1.LabelFormatter = solidG.LabelFormatter;
+                //});
+                labelTest.Text = $"Eski: {oldIncome:N2} Yeni: {newIncome:N2} Yüzde: {percentageChange:N2}%";
+                SolidGauge solidG = statistics.UpdateSolidGauge(percentageChange);
+                solidGauge1.From = solidG.From;
+                solidGauge1.To = solidG.To;
+                solidGauge1.FromColor = solidG.FromColor;
+                solidGauge1.ToColor = solidG.ToColor;
+                solidGauge1.Base.LabelsVisibility = solidG.Base.LabelsVisibility;
+                solidGauge1.Base.Foreground = solidG.Base.Foreground;
+                solidGauge1.LabelFormatter = solidG.LabelFormatter;
+
+
+            }
+
+
+
         }
     }
 }

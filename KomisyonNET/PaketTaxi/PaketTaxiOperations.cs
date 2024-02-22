@@ -11,6 +11,7 @@ using System.Windows.Forms;
 //using static KomisyonNET.FormMain;
 using KomisyonNET.Settings;
 using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Drawing;
 
 namespace KomisyonNET.PaketTaxi
 {
@@ -168,7 +169,7 @@ namespace KomisyonNET.PaketTaxi
             return paketTaxiModels;
         }
         */
-        public async Task<List<PaketTaxiModel>> ExtractPdf(string[] pdfFiles, IProgress<(int progress, string message)> progress, IProgress<(int progress, string message,List<string> errpath)> progressError)
+        public async Task<List<PaketTaxiModel>> ExtractPdf(string[] pdfFiles, IProgress<(int progress, string message)> progress, IProgress<(int progress, string message, List<string> errpath)> progressError)
         {
             List<PaketTaxiModel> paketTaxiModels = new List<PaketTaxiModel>();
             List<string> errorPath = new List<string>();
@@ -188,16 +189,71 @@ namespace KomisyonNET.PaketTaxi
                         {
                             errorPath.Add(pdfFiles[i]);
                             return null;
-                        }
+                        } 
                         else
                         {
-                            return new PaketTaxiModel
+
+
+
+                            var check = pdfTables.Length;
+
+                            //MessageBox.Show(check.ToString()+" Adet Tablo Bulundu.");
+
+
+                            int indexTable = 0;
+
+                            // for loop ile tabloları kontrol et
+                            var rowIndexInvoice = -1;
+                            for (int j = 0; j < pdfTables.Length; j++)
                             {
-                                nameSurname = pdfTables[0].GetText(1, 0),
-                                tInvoice = TryDouble(pdfTables[1].GetText(10, 7)),
-                                commission = CalculateCommission(TryDouble(pdfTables[1].GetText(10, 7))),
-                                fee = conf.GetFee()
-                            };
+                                for (int k = 0; k < pdfTables[j].GetRowCount(); k++)
+                                {
+                                    var rowText = pdfTables[j].GetText(k, 0);
+
+                                    if (rowText.Contains("BRÜT HAKEDİŞ") && rowText.Contains("FATURA TUTARI"))
+                                    {
+                                        rowIndexInvoice = k;
+                                        indexTable = j;
+                                        break;
+                                    }
+                                }
+                                
+                            }
+
+
+
+
+                            
+                            /*
+                            for (int j = 0; j < pdfTables[indexTable+1].GetRowCount(); j++)
+                            {
+                                var rowText = pdfTables[indexTable+1].GetText(j, 0); 
+
+                                if (rowText.Contains("BRÜT HAKEDİŞ") && rowText.Contains("FATURA TUTARI"))
+                                {
+                                    rowIndexInvoice = j;
+                                    break; 
+                                }
+                            }
+                            */
+                            if (rowIndexInvoice == -1)
+                            {
+                                
+                                errorPath.Add(pdfFiles[i]+" Brüt Bulunamadı!");
+                                return null;
+                                
+                            }
+                            else
+                            {
+                                //MessageBox.Show(pdfTables[indexTable].GetText(1, 0));
+                                return new PaketTaxiModel
+                                {
+                                    nameSurname = pdfTables[indexTable-1].GetText(1, 0),
+                                    tInvoice = TryDouble(pdfTables[indexTable].GetText(rowIndexInvoice, 7)),
+                                    commission = CalculateCommission(TryDouble(pdfTables[indexTable].GetText(rowIndexInvoice, 7))),
+                                    fee = conf.GetFee()
+                                };
+                            }
                         }
                     }
                 });
@@ -206,7 +262,7 @@ namespace KomisyonNET.PaketTaxi
                 {
                     if (model.tInvoice != 0)
                     {
-                           // add model
+                        // add model
                         paketTaxiModels.Add(model);
                     }
                     else
@@ -214,10 +270,10 @@ namespace KomisyonNET.PaketTaxi
                         // add error path
                         errorPath.Add(pdfFiles[i]);
                     }
-                    
+
                 }
                 //hatalı fatura sayısını rapor et
-                progressError.Report((errorPath.Count, $"Hatalı Fatura Sayısı: {errorPath.Count}/{pdfFiles.Length}",errorPath));
+                progressError.Report((errorPath.Count, $"Hatalı Fatura Sayısı: {errorPath.Count}/{pdfFiles.Length}", errorPath));
 
 
                 // İlerlemeyi rapor et
@@ -230,33 +286,68 @@ namespace KomisyonNET.PaketTaxi
         }
 
 
-
-        public async Task<PaketTaxiModel> ExtractPdfAsync(string file)
+        /*
+        public async Task<List<PaketTaxiModel>> ExtractPdfAsync(string[] pdfFiles, IProgress<(int progress, string message)> progress, IProgress<(int progress, string message, List<string> errpath)> progressError)
         {
-            return await Task.Run(() =>
+            List<PaketTaxiModel> paketTaxiModels = new List<PaketTaxiModel>();
+            List<string> errorPath = new List<string>();
+
+            foreach (var file in pdfFiles)
             {
                 using (PdfDocument pdf = new PdfDocument())
                 {
                     pdf.LoadFromFile(file);
 
                     PdfTableExtractor extractor = new PdfTableExtractor(pdf);
-                    PdfTable[] pdfTables = extractor.ExtractTable(0);
+                    var tableCount = extractor.ExtractTableCount(0); // 0 numaralı sayfada tablo sayısını al
 
-                    PaketTaxiModel model = new PaketTaxiModel
+                    if (tableCount > 1) // En az 2 tablo olduğunu varsayıyoruz
                     {
-                        nameSurname = pdfTables[0].GetText(1, 0),
-                        tInvoice = TryDouble(pdfTables[1].GetText(10, 7)),
-                        commission = CalculateCommission(TryDouble(pdfTables[1].GetText(10, 7))),
-                        fee = conf.GetFee()
-                    };
+                        var table = extractor.ExtractTable(0, 1); // İkinci tabloyu al (index 1)
+                        int foundRow = -1;
 
-                    return model;
+                        for (int rowIndex = 0; rowIndex < table.GetRowCount(); rowIndex++)
+                        {
+                            var rowText = table.GetText(rowIndex, 0); // Satırın tamamını al
+                            if (rowText.Contains("Brüt Hakediş (Fatura Tutarı)"))
+                            {
+                                foundRow = rowIndex;
+                                break;
+                            }
+                        }
+
+                        if (foundRow != -1)
+                        {
+                            // Bulunan satırın 10. sütunundaki veriyi çıkar
+                            var tInvoiceText = table.GetText(foundRow, 9); // Sütun indexi 0'dan başladığı için 9 kullanılır
+                            var tInvoice = TryDouble(tInvoiceText);
+
+                            paketTaxiModels.Add(new PaketTaxiModel
+                            {
+                                // Diğer alanları doldur
+                                tInvoice = tInvoice
+                            });
+                        }
+                        else
+                        {
+                            errorPath.Add(file);
+                        }
+                    }
+                    else
+                    {
+                        errorPath.Add(file);
+                    }
                 }
-            });
+
+                // İlerlemeyi rapor et
+                progress.Report((errorPath.Count, $"Faturalar İşleniyor ({errorPath.Count} / {pdfFiles.Length})"));
+            }
+
+            return paketTaxiModels;
         }
 
 
-
+        */
 
 
 
@@ -264,7 +355,12 @@ namespace KomisyonNET.PaketTaxi
         // try double function
         public double TryDouble(string value)
         {
+
+
             double result;
+
+
+            //double.TryParse(value, out result)
             if (double.TryParse(value, out result))
             {
                 return result;

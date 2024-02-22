@@ -61,6 +61,58 @@
             this.BtnCalculate = new MaterialSkin.Controls.MaterialButton();
             this.labelPtInfo = new MaterialSkin.Controls.MaterialLabel();
             this.statisticPage = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
+            this.mCardProfit = new MaterialSkin.Controls.MaterialCard();
+            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
+            this.mLabelProfitHeader = new MaterialSkin.Controls.MaterialLabel();
+            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
+            this.mLabelTProfit = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel23 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel24 = new MaterialSkin.Controls.MaterialLabel();
+            this.mLabelTInvoice = new MaterialSkin.Controls.MaterialLabel();
+            this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
+            this.elementHost4 = new System.Windows.Forms.Integration.ElementHost();
+            this.pieChart1 = new LiveCharts.Wpf.PieChart();
+            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
+            this.elementHost5 = new System.Windows.Forms.Integration.ElementHost();
+            this.cartesianChart1 = new LiveCharts.Wpf.CartesianChart();
+            this.tableLayoutPanelRadio = new System.Windows.Forms.TableLayoutPanel();
+            this.mRadioBtnStacked = new MaterialSkin.Controls.MaterialRadioButton();
+            this.mRadioBtnColumn = new MaterialSkin.Controls.MaterialRadioButton();
+            this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
+            this.materialCard10 = new MaterialSkin.Controls.MaterialCard();
+            this.tableLayoutPanel28 = new System.Windows.Forms.TableLayoutPanel();
+            this.materialLabel25 = new MaterialSkin.Controls.MaterialLabel();
+            this.mBtnClear = new MaterialSkin.Controls.MaterialButton();
+            this.mBtnCalculateStatistic = new MaterialSkin.Controls.MaterialButton();
+            this.mBtnFileSelect = new MaterialSkin.Controls.MaterialButton();
+            this.mCardPreview = new MaterialSkin.Controls.MaterialCard();
+            this.tableLayoutPanel29 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel30 = new System.Windows.Forms.TableLayoutPanel();
+            this.materialLabel26 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel27 = new MaterialSkin.Controls.MaterialLabel();
+            this.MaskTxtBoxNewFee = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.MaskTxtBoxNewComm = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.solidGauge1 = new LiveCharts.WinForms.SolidGauge();
+            this.tableLayoutPanel31 = new System.Windows.Forms.TableLayoutPanel();
+            this.mBtnPreview = new MaterialSkin.Controls.MaterialButton();
+            this.labelTest = new System.Windows.Forms.Label();
+            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
+            this.mCbxPreview = new MaterialSkin.Controls.MaterialCheckbox();
+            this.materialCard9 = new MaterialSkin.Controls.MaterialCard();
+            this.tableLayoutPanel32 = new System.Windows.Forms.TableLayoutPanel();
+            this.mListViewTable = new MaterialSkin.Controls.MaterialListView();
+            this.colNameSurname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colTInvoice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colFee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colCommission = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colEarn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colEarnRate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tableLayoutPanel33 = new System.Windows.Forms.TableLayoutPanel();
+            this.t = new MaterialSkin.Controls.MaterialRadioButton();
+            this.mRadioBtnEarn = new MaterialSkin.Controls.MaterialRadioButton();
+            this.materialLabel22 = new MaterialSkin.Controls.MaterialLabel();
             this.settingsPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
@@ -104,22 +156,6 @@
             this.materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
             this.ımageListSideNav = new System.Windows.Forms.ImageList(this.components);
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.elementHost3 = new System.Windows.Forms.Integration.ElementHost();
-            this.cartesianChart1 = new LiveCharts.Wpf.CartesianChart();
-            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
-            this.colNameSurname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colTInvoice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colFee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colCommission = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.solidGauge1 = new LiveCharts.WinForms.SolidGauge();
-            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
-            this.cartesianChart2 = new LiveCharts.Wpf.CartesianChart();
-            this.materialCard7 = new MaterialSkin.Controls.MaterialCard();
-            this.elementHost1 = new System.Windows.Forms.Integration.ElementHost();
-            this.pieChart1 = new LiveCharts.Wpf.PieChart();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
             this.materialTabControl1.SuspendLayout();
             this.homePage.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -134,6 +170,26 @@
             this.tableLayoutPanel12.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.tableLayoutPanel14.SuspendLayout();
+            this.statisticPage.SuspendLayout();
+            this.tableLayoutPanel20.SuspendLayout();
+            this.tableLayoutPanel21.SuspendLayout();
+            this.mCardProfit.SuspendLayout();
+            this.tableLayoutPanel22.SuspendLayout();
+            this.tableLayoutPanel23.SuspendLayout();
+            this.tableLayoutPanel24.SuspendLayout();
+            this.tableLayoutPanel25.SuspendLayout();
+            this.tableLayoutPanelRadio.SuspendLayout();
+            this.tableLayoutPanel27.SuspendLayout();
+            this.materialCard10.SuspendLayout();
+            this.tableLayoutPanel28.SuspendLayout();
+            this.mCardPreview.SuspendLayout();
+            this.tableLayoutPanel29.SuspendLayout();
+            this.tableLayoutPanel30.SuspendLayout();
+            this.tableLayoutPanel31.SuspendLayout();
+            this.tableLayoutPanel26.SuspendLayout();
+            this.materialCard9.SuspendLayout();
+            this.tableLayoutPanel32.SuspendLayout();
+            this.tableLayoutPanel33.SuspendLayout();
             this.settingsPage.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -151,9 +207,6 @@
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.materialCard7.SuspendLayout();
-            this.tableLayoutPanel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -162,7 +215,6 @@
             this.materialTabControl1.Controls.Add(this.pTaxiPage);
             this.materialTabControl1.Controls.Add(this.statisticPage);
             this.materialTabControl1.Controls.Add(this.settingsPage);
-            this.materialTabControl1.Controls.Add(this.tabPage1);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.ImageList = this.ımageListSideNav;
@@ -686,6 +738,7 @@
             // statisticPage
             // 
             this.statisticPage.AutoScroll = true;
+            this.statisticPage.Controls.Add(this.tableLayoutPanel20);
             this.statisticPage.ImageKey = "icons8-statistics-32.png";
             this.statisticPage.Location = new System.Drawing.Point(4, 39);
             this.statisticPage.Name = "statisticPage";
@@ -693,6 +746,825 @@
             this.statisticPage.TabIndex = 2;
             this.statisticPage.Text = "İstatistik";
             this.statisticPage.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel20
+            // 
+            this.tableLayoutPanel20.ColumnCount = 3;
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tableLayoutPanel20.Controls.Add(this.tableLayoutPanel21, 1, 1);
+            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
+            this.tableLayoutPanel20.RowCount = 3;
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 96F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2F));
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(889, 621);
+            this.tableLayoutPanel20.TabIndex = 0;
+            // 
+            // tableLayoutPanel21
+            // 
+            this.tableLayoutPanel21.ColumnCount = 2;
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel21.Controls.Add(this.mCardProfit, 1, 0);
+            this.tableLayoutPanel21.Controls.Add(this.tableLayoutPanel27, 0, 0);
+            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(20, 15);
+            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
+            this.tableLayoutPanel21.RowCount = 1;
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(847, 590);
+            this.tableLayoutPanel21.TabIndex = 0;
+            // 
+            // mCardProfit
+            // 
+            this.mCardProfit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mCardProfit.Controls.Add(this.tableLayoutPanel22);
+            this.mCardProfit.Depth = 0;
+            this.mCardProfit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mCardProfit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mCardProfit.Location = new System.Drawing.Point(564, 14);
+            this.mCardProfit.Margin = new System.Windows.Forms.Padding(14);
+            this.mCardProfit.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mCardProfit.Name = "mCardProfit";
+            this.mCardProfit.Padding = new System.Windows.Forms.Padding(14);
+            this.mCardProfit.Size = new System.Drawing.Size(269, 562);
+            this.mCardProfit.TabIndex = 0;
+            // 
+            // tableLayoutPanel22
+            // 
+            this.tableLayoutPanel22.ColumnCount = 1;
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel22.Controls.Add(this.mLabelProfitHeader, 0, 0);
+            this.tableLayoutPanel22.Controls.Add(this.tableLayoutPanel23, 0, 1);
+            this.tableLayoutPanel22.Controls.Add(this.tableLayoutPanel24, 0, 2);
+            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(14, 14);
+            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
+            this.tableLayoutPanel22.RowCount = 3;
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(241, 534);
+            this.tableLayoutPanel22.TabIndex = 0;
+            // 
+            // mLabelProfitHeader
+            // 
+            this.mLabelProfitHeader.AutoSize = true;
+            this.mLabelProfitHeader.Depth = 0;
+            this.mLabelProfitHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mLabelProfitHeader.Font = new System.Drawing.Font("Roboto", 34F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.mLabelProfitHeader.FontType = MaterialSkin.MaterialSkinManager.fontType.H4;
+            this.mLabelProfitHeader.Location = new System.Drawing.Point(3, 0);
+            this.mLabelProfitHeader.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mLabelProfitHeader.Name = "mLabelProfitHeader";
+            this.mLabelProfitHeader.Size = new System.Drawing.Size(235, 50);
+            this.mLabelProfitHeader.TabIndex = 0;
+            this.mLabelProfitHeader.Text = "Gelir";
+            this.mLabelProfitHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel23
+            // 
+            this.tableLayoutPanel23.ColumnCount = 2;
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.38298F));
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.61702F));
+            this.tableLayoutPanel23.Controls.Add(this.mLabelTProfit, 1, 1);
+            this.tableLayoutPanel23.Controls.Add(this.materialLabel23, 0, 0);
+            this.tableLayoutPanel23.Controls.Add(this.materialLabel24, 0, 1);
+            this.tableLayoutPanel23.Controls.Add(this.mLabelTInvoice, 1, 0);
+            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel23.Location = new System.Drawing.Point(3, 53);
+            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
+            this.tableLayoutPanel23.RowCount = 2;
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 52.7027F));
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.2973F));
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(235, 74);
+            this.tableLayoutPanel23.TabIndex = 1;
+            // 
+            // mLabelTProfit
+            // 
+            this.mLabelTProfit.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mLabelTProfit.AutoSize = true;
+            this.mLabelTProfit.Depth = 0;
+            this.mLabelTProfit.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mLabelTProfit.Location = new System.Drawing.Point(112, 47);
+            this.mLabelTProfit.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mLabelTProfit.Name = "mLabelTProfit";
+            this.mLabelTProfit.Size = new System.Drawing.Size(31, 19);
+            this.mLabelTProfit.TabIndex = 3;
+            this.mLabelTProfit.Text = "0,00";
+            this.mLabelTProfit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // materialLabel23
+            // 
+            this.materialLabel23.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.materialLabel23.AutoSize = true;
+            this.materialLabel23.Depth = 0;
+            this.materialLabel23.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel23.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.materialLabel23.Location = new System.Drawing.Point(59, 11);
+            this.materialLabel23.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel23.Name = "materialLabel23";
+            this.materialLabel23.Size = new System.Drawing.Size(47, 17);
+            this.materialLabel23.TabIndex = 0;
+            this.materialLabel23.Text = "Fatura:";
+            this.materialLabel23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // materialLabel24
+            // 
+            this.materialLabel24.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.materialLabel24.AutoSize = true;
+            this.materialLabel24.Depth = 0;
+            this.materialLabel24.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel24.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.materialLabel24.Location = new System.Drawing.Point(54, 48);
+            this.materialLabel24.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel24.Name = "materialLabel24";
+            this.materialLabel24.Size = new System.Drawing.Size(52, 17);
+            this.materialLabel24.TabIndex = 1;
+            this.materialLabel24.Text = "Kazanç:";
+            this.materialLabel24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // mLabelTInvoice
+            // 
+            this.mLabelTInvoice.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mLabelTInvoice.AutoSize = true;
+            this.mLabelTInvoice.Depth = 0;
+            this.mLabelTInvoice.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.mLabelTInvoice.Location = new System.Drawing.Point(112, 10);
+            this.mLabelTInvoice.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mLabelTInvoice.Name = "mLabelTInvoice";
+            this.mLabelTInvoice.Size = new System.Drawing.Size(31, 19);
+            this.mLabelTInvoice.TabIndex = 2;
+            this.mLabelTInvoice.Text = "0,00";
+            this.mLabelTInvoice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel24
+            // 
+            this.tableLayoutPanel24.ColumnCount = 1;
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel24.Controls.Add(this.elementHost4, 0, 0);
+            this.tableLayoutPanel24.Controls.Add(this.tableLayoutPanel25, 0, 1);
+            this.tableLayoutPanel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel24.Location = new System.Drawing.Point(3, 133);
+            this.tableLayoutPanel24.Name = "tableLayoutPanel24";
+            this.tableLayoutPanel24.RowCount = 2;
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel24.Size = new System.Drawing.Size(235, 398);
+            this.tableLayoutPanel24.TabIndex = 2;
+            // 
+            // elementHost4
+            // 
+            this.elementHost4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost4.Location = new System.Drawing.Point(3, 3);
+            this.elementHost4.Name = "elementHost4";
+            this.elementHost4.Size = new System.Drawing.Size(229, 153);
+            this.elementHost4.TabIndex = 0;
+            this.elementHost4.Text = "elementHost4";
+            this.elementHost4.Child = this.pieChart1;
+            // 
+            // tableLayoutPanel25
+            // 
+            this.tableLayoutPanel25.ColumnCount = 1;
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel25.Controls.Add(this.elementHost5, 0, 1);
+            this.tableLayoutPanel25.Controls.Add(this.tableLayoutPanelRadio, 0, 0);
+            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 162);
+            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
+            this.tableLayoutPanel25.RowCount = 2;
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(229, 233);
+            this.tableLayoutPanel25.TabIndex = 1;
+            // 
+            // elementHost5
+            // 
+            this.elementHost5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.elementHost5.Location = new System.Drawing.Point(3, 49);
+            this.elementHost5.Name = "elementHost5";
+            this.elementHost5.Size = new System.Drawing.Size(223, 181);
+            this.elementHost5.TabIndex = 0;
+            this.elementHost5.Text = "elementHost5";
+            this.elementHost5.Child = this.cartesianChart1;
+            // 
+            // tableLayoutPanelRadio
+            // 
+            this.tableLayoutPanelRadio.ColumnCount = 2;
+            this.tableLayoutPanelRadio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelRadio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelRadio.Controls.Add(this.mRadioBtnStacked, 0, 0);
+            this.tableLayoutPanelRadio.Controls.Add(this.mRadioBtnColumn, 1, 0);
+            this.tableLayoutPanelRadio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelRadio.Enabled = false;
+            this.tableLayoutPanelRadio.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanelRadio.Name = "tableLayoutPanelRadio";
+            this.tableLayoutPanelRadio.RowCount = 1;
+            this.tableLayoutPanelRadio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanelRadio.Size = new System.Drawing.Size(223, 40);
+            this.tableLayoutPanelRadio.TabIndex = 1;
+            // 
+            // mRadioBtnStacked
+            // 
+            this.mRadioBtnStacked.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.mRadioBtnStacked.AutoSize = true;
+            this.mRadioBtnStacked.Checked = true;
+            this.mRadioBtnStacked.Depth = 0;
+            this.mRadioBtnStacked.Location = new System.Drawing.Point(40, 1);
+            this.mRadioBtnStacked.Margin = new System.Windows.Forms.Padding(0);
+            this.mRadioBtnStacked.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mRadioBtnStacked.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mRadioBtnStacked.Name = "mRadioBtnStacked";
+            this.mRadioBtnStacked.Ripple = true;
+            this.mRadioBtnStacked.Size = new System.Drawing.Size(71, 37);
+            this.mRadioBtnStacked.TabIndex = 0;
+            this.mRadioBtnStacked.TabStop = true;
+            this.mRadioBtnStacked.Text = "Yığın";
+            this.mRadioBtnStacked.UseVisualStyleBackColor = true;
+            this.mRadioBtnStacked.CheckedChanged += new System.EventHandler(this.mRadioBtnStacked_CheckedChanged);
+            // 
+            // mRadioBtnColumn
+            // 
+            this.mRadioBtnColumn.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mRadioBtnColumn.AutoSize = true;
+            this.mRadioBtnColumn.Depth = 0;
+            this.mRadioBtnColumn.Location = new System.Drawing.Point(111, 1);
+            this.mRadioBtnColumn.Margin = new System.Windows.Forms.Padding(0);
+            this.mRadioBtnColumn.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mRadioBtnColumn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mRadioBtnColumn.Name = "mRadioBtnColumn";
+            this.mRadioBtnColumn.Ripple = true;
+            this.mRadioBtnColumn.Size = new System.Drawing.Size(71, 37);
+            this.mRadioBtnColumn.TabIndex = 1;
+            this.mRadioBtnColumn.TabStop = true;
+            this.mRadioBtnColumn.Text = "Sıralı";
+            this.mRadioBtnColumn.UseVisualStyleBackColor = true;
+            this.mRadioBtnColumn.CheckedChanged += new System.EventHandler(this.mRadioBtnColumn_CheckedChanged);
+            // 
+            // tableLayoutPanel27
+            // 
+            this.tableLayoutPanel27.ColumnCount = 1;
+            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel27.Controls.Add(this.materialCard10, 0, 0);
+            this.tableLayoutPanel27.Controls.Add(this.mCardPreview, 0, 2);
+            this.tableLayoutPanel27.Controls.Add(this.tableLayoutPanel26, 0, 1);
+            this.tableLayoutPanel27.Controls.Add(this.materialCard9, 0, 3);
+            this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel27.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel27.Name = "tableLayoutPanel27";
+            this.tableLayoutPanel27.RowCount = 4;
+            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38F));
+            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47F));
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(544, 584);
+            this.tableLayoutPanel27.TabIndex = 1;
+            // 
+            // materialCard10
+            // 
+            this.materialCard10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard10.Controls.Add(this.tableLayoutPanel28);
+            this.materialCard10.Depth = 0;
+            this.materialCard10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard10.Location = new System.Drawing.Point(14, 14);
+            this.materialCard10.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard10.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard10.Name = "materialCard10";
+            this.materialCard10.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard10.Size = new System.Drawing.Size(516, 54);
+            this.materialCard10.TabIndex = 0;
+            // 
+            // tableLayoutPanel28
+            // 
+            this.tableLayoutPanel28.ColumnCount = 8;
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13F));
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel28.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 3F));
+            this.tableLayoutPanel28.Controls.Add(this.materialLabel25, 0, 0);
+            this.tableLayoutPanel28.Controls.Add(this.mBtnClear, 6, 0);
+            this.tableLayoutPanel28.Controls.Add(this.mBtnCalculateStatistic, 4, 0);
+            this.tableLayoutPanel28.Controls.Add(this.mBtnFileSelect, 2, 0);
+            this.tableLayoutPanel28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel28.Location = new System.Drawing.Point(14, 14);
+            this.tableLayoutPanel28.Name = "tableLayoutPanel28";
+            this.tableLayoutPanel28.RowCount = 1;
+            this.tableLayoutPanel28.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel28.Size = new System.Drawing.Size(488, 26);
+            this.tableLayoutPanel28.TabIndex = 0;
+            // 
+            // materialLabel25
+            // 
+            this.materialLabel25.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.materialLabel25.AutoSize = true;
+            this.materialLabel25.Depth = 0;
+            this.materialLabel25.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel25.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel25.Location = new System.Drawing.Point(5, 1);
+            this.materialLabel25.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel25.Name = "materialLabel25";
+            this.materialLabel25.Size = new System.Drawing.Size(55, 24);
+            this.materialLabel25.TabIndex = 0;
+            this.materialLabel25.Text = "İşlem:";
+            // 
+            // mBtnClear
+            // 
+            this.mBtnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mBtnClear.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mBtnClear.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.mBtnClear.Depth = 0;
+            this.mBtnClear.Enabled = false;
+            this.mBtnClear.HighEmphasis = true;
+            this.mBtnClear.Icon = null;
+            this.mBtnClear.Location = new System.Drawing.Point(353, 6);
+            this.mBtnClear.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mBtnClear.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mBtnClear.Name = "mBtnClear";
+            this.mBtnClear.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.mBtnClear.Size = new System.Drawing.Size(114, 14);
+            this.mBtnClear.TabIndex = 3;
+            this.mBtnClear.Text = "Temizle";
+            this.mBtnClear.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.mBtnClear.UseAccentColor = true;
+            this.mBtnClear.UseVisualStyleBackColor = true;
+            this.mBtnClear.Click += new System.EventHandler(this.mBtnClear_Click);
+            // 
+            // mBtnCalculateStatistic
+            // 
+            this.mBtnCalculateStatistic.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mBtnCalculateStatistic.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mBtnCalculateStatistic.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.mBtnCalculateStatistic.Depth = 0;
+            this.mBtnCalculateStatistic.Enabled = false;
+            this.mBtnCalculateStatistic.HighEmphasis = true;
+            this.mBtnCalculateStatistic.Icon = null;
+            this.mBtnCalculateStatistic.Location = new System.Drawing.Point(217, 6);
+            this.mBtnCalculateStatistic.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mBtnCalculateStatistic.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mBtnCalculateStatistic.Name = "mBtnCalculateStatistic";
+            this.mBtnCalculateStatistic.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.mBtnCalculateStatistic.Size = new System.Drawing.Size(114, 14);
+            this.mBtnCalculateStatistic.TabIndex = 2;
+            this.mBtnCalculateStatistic.Text = "Hesapla";
+            this.mBtnCalculateStatistic.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.mBtnCalculateStatistic.UseAccentColor = false;
+            this.mBtnCalculateStatistic.UseVisualStyleBackColor = true;
+            this.mBtnCalculateStatistic.Click += new System.EventHandler(this.mBtnCalculateStatistic_Click);
+            // 
+            // mBtnFileSelect
+            // 
+            this.mBtnFileSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mBtnFileSelect.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mBtnFileSelect.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.mBtnFileSelect.Depth = 0;
+            this.mBtnFileSelect.HighEmphasis = true;
+            this.mBtnFileSelect.Icon = null;
+            this.mBtnFileSelect.Location = new System.Drawing.Point(81, 6);
+            this.mBtnFileSelect.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mBtnFileSelect.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mBtnFileSelect.Name = "mBtnFileSelect";
+            this.mBtnFileSelect.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.mBtnFileSelect.Size = new System.Drawing.Size(114, 14);
+            this.mBtnFileSelect.TabIndex = 1;
+            this.mBtnFileSelect.Text = "Dosya Seç";
+            this.mBtnFileSelect.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            this.mBtnFileSelect.UseAccentColor = true;
+            this.mBtnFileSelect.UseVisualStyleBackColor = true;
+            this.mBtnFileSelect.Click += new System.EventHandler(this.mBtnFileSelect_Click);
+            // 
+            // mCardPreview
+            // 
+            this.mCardPreview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mCardPreview.Controls.Add(this.tableLayoutPanel29);
+            this.mCardPreview.Depth = 0;
+            this.mCardPreview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mCardPreview.Enabled = false;
+            this.mCardPreview.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.mCardPreview.Location = new System.Drawing.Point(14, 131);
+            this.mCardPreview.Margin = new System.Windows.Forms.Padding(14);
+            this.mCardPreview.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mCardPreview.Name = "mCardPreview";
+            this.mCardPreview.Padding = new System.Windows.Forms.Padding(14);
+            this.mCardPreview.Size = new System.Drawing.Size(516, 180);
+            this.mCardPreview.TabIndex = 1;
+            // 
+            // tableLayoutPanel29
+            // 
+            this.tableLayoutPanel29.ColumnCount = 2;
+            this.tableLayoutPanel29.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.08197F));
+            this.tableLayoutPanel29.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.91803F));
+            this.tableLayoutPanel29.Controls.Add(this.tableLayoutPanel30, 0, 0);
+            this.tableLayoutPanel29.Controls.Add(this.solidGauge1, 1, 0);
+            this.tableLayoutPanel29.Controls.Add(this.tableLayoutPanel31, 0, 1);
+            this.tableLayoutPanel29.Controls.Add(this.labelTest, 1, 1);
+            this.tableLayoutPanel29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel29.Location = new System.Drawing.Point(14, 14);
+            this.tableLayoutPanel29.Name = "tableLayoutPanel29";
+            this.tableLayoutPanel29.RowCount = 2;
+            this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel29.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel29.Size = new System.Drawing.Size(488, 152);
+            this.tableLayoutPanel29.TabIndex = 0;
+            // 
+            // tableLayoutPanel30
+            // 
+            this.tableLayoutPanel30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel30.ColumnCount = 2;
+            this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
+            this.tableLayoutPanel30.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.2029F));
+            this.tableLayoutPanel30.Controls.Add(this.materialLabel26, 0, 1);
+            this.tableLayoutPanel30.Controls.Add(this.materialLabel27, 0, 0);
+            this.tableLayoutPanel30.Controls.Add(this.MaskTxtBoxNewFee, 1, 0);
+            this.tableLayoutPanel30.Controls.Add(this.MaskTxtBoxNewComm, 1, 1);
+            this.tableLayoutPanel30.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel30.Name = "tableLayoutPanel30";
+            this.tableLayoutPanel30.RowCount = 2;
+            this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel30.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel30.Size = new System.Drawing.Size(214, 102);
+            this.tableLayoutPanel30.TabIndex = 4;
+            // 
+            // materialLabel26
+            // 
+            this.materialLabel26.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.materialLabel26.AutoSize = true;
+            this.materialLabel26.Depth = 0;
+            this.materialLabel26.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel26.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel26.Location = new System.Drawing.Point(5, 68);
+            this.materialLabel26.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel26.Name = "materialLabel26";
+            this.materialLabel26.Size = new System.Drawing.Size(68, 17);
+            this.materialLabel26.TabIndex = 2;
+            this.materialLabel26.Text = "Komisyon:";
+            this.materialLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // materialLabel27
+            // 
+            this.materialLabel27.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.materialLabel27.AutoSize = true;
+            this.materialLabel27.Depth = 0;
+            this.materialLabel27.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel27.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
+            this.materialLabel27.Location = new System.Drawing.Point(34, 17);
+            this.materialLabel27.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel27.Name = "materialLabel27";
+            this.materialLabel27.Size = new System.Drawing.Size(39, 17);
+            this.materialLabel27.TabIndex = 1;
+            this.materialLabel27.Text = "Aidat:";
+            this.materialLabel27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MaskTxtBoxNewFee
+            // 
+            this.MaskTxtBoxNewFee.AllowPromptAsInput = true;
+            this.MaskTxtBoxNewFee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaskTxtBoxNewFee.AnimateReadOnly = false;
+            this.MaskTxtBoxNewFee.AsciiOnly = false;
+            this.MaskTxtBoxNewFee.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MaskTxtBoxNewFee.BeepOnError = true;
+            this.MaskTxtBoxNewFee.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.MaskTxtBoxNewFee.Depth = 0;
+            this.MaskTxtBoxNewFee.ErrorMessage = "Hata!!";
+            this.MaskTxtBoxNewFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.MaskTxtBoxNewFee.HelperText = "500,00";
+            this.MaskTxtBoxNewFee.HidePromptOnLeave = false;
+            this.MaskTxtBoxNewFee.HideSelection = true;
+            this.MaskTxtBoxNewFee.Hint = "Yeni Değer";
+            this.MaskTxtBoxNewFee.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.MaskTxtBoxNewFee.LeadingIcon = null;
+            this.MaskTxtBoxNewFee.LeaveOnEnterKey = true;
+            this.MaskTxtBoxNewFee.Location = new System.Drawing.Point(79, 3);
+            this.MaskTxtBoxNewFee.Mask = "";
+            this.MaskTxtBoxNewFee.MaximumSize = new System.Drawing.Size(280, 48);
+            this.MaskTxtBoxNewFee.MaxLength = 32767;
+            this.MaskTxtBoxNewFee.MouseState = MaterialSkin.MouseState.OUT;
+            this.MaskTxtBoxNewFee.Name = "MaskTxtBoxNewFee";
+            this.MaskTxtBoxNewFee.PasswordChar = '\0';
+            this.MaskTxtBoxNewFee.PrefixSuffixText = "₺";
+            this.MaskTxtBoxNewFee.PromptChar = '_';
+            this.MaskTxtBoxNewFee.ReadOnly = false;
+            this.MaskTxtBoxNewFee.RejectInputOnFirstFailure = false;
+            this.MaskTxtBoxNewFee.ResetOnPrompt = true;
+            this.MaskTxtBoxNewFee.ResetOnSpace = true;
+            this.MaskTxtBoxNewFee.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MaskTxtBoxNewFee.SelectedText = "";
+            this.MaskTxtBoxNewFee.SelectionLength = 0;
+            this.MaskTxtBoxNewFee.SelectionStart = 0;
+            this.MaskTxtBoxNewFee.ShortcutsEnabled = true;
+            this.MaskTxtBoxNewFee.ShowAssistiveText = true;
+            this.MaskTxtBoxNewFee.Size = new System.Drawing.Size(132, 48);
+            this.MaskTxtBoxNewFee.SkipLiterals = true;
+            this.MaskTxtBoxNewFee.TabIndex = 3;
+            this.MaskTxtBoxNewFee.TabStop = false;
+            this.MaskTxtBoxNewFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.MaskTxtBoxNewFee.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.MaskTxtBoxNewFee.TrailingIcon = global::KomisyonNET.Properties.Resources.fee_50;
+            this.MaskTxtBoxNewFee.UseSystemPasswordChar = false;
+            this.MaskTxtBoxNewFee.ValidatingType = null;
+            // 
+            // MaskTxtBoxNewComm
+            // 
+            this.MaskTxtBoxNewComm.AllowPromptAsInput = true;
+            this.MaskTxtBoxNewComm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MaskTxtBoxNewComm.AnimateReadOnly = false;
+            this.MaskTxtBoxNewComm.AsciiOnly = false;
+            this.MaskTxtBoxNewComm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MaskTxtBoxNewComm.BeepOnError = false;
+            this.MaskTxtBoxNewComm.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.MaskTxtBoxNewComm.Depth = 0;
+            this.MaskTxtBoxNewComm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.MaskTxtBoxNewComm.HidePromptOnLeave = false;
+            this.MaskTxtBoxNewComm.HideSelection = true;
+            this.MaskTxtBoxNewComm.Hint = "Yeni Oran";
+            this.MaskTxtBoxNewComm.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.MaskTxtBoxNewComm.LeadingIcon = null;
+            this.MaskTxtBoxNewComm.Location = new System.Drawing.Point(79, 54);
+            this.MaskTxtBoxNewComm.Mask = "";
+            this.MaskTxtBoxNewComm.MaximumSize = new System.Drawing.Size(280, 48);
+            this.MaskTxtBoxNewComm.MaxLength = 32767;
+            this.MaskTxtBoxNewComm.MouseState = MaterialSkin.MouseState.OUT;
+            this.MaskTxtBoxNewComm.Name = "MaskTxtBoxNewComm";
+            this.MaskTxtBoxNewComm.PasswordChar = '\0';
+            this.MaskTxtBoxNewComm.PrefixSuffixText = "%";
+            this.MaskTxtBoxNewComm.PromptChar = '_';
+            this.MaskTxtBoxNewComm.ReadOnly = false;
+            this.MaskTxtBoxNewComm.RejectInputOnFirstFailure = false;
+            this.MaskTxtBoxNewComm.ResetOnPrompt = true;
+            this.MaskTxtBoxNewComm.ResetOnSpace = true;
+            this.MaskTxtBoxNewComm.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MaskTxtBoxNewComm.SelectedText = "";
+            this.MaskTxtBoxNewComm.SelectionLength = 0;
+            this.MaskTxtBoxNewComm.SelectionStart = 0;
+            this.MaskTxtBoxNewComm.ShortcutsEnabled = true;
+            this.MaskTxtBoxNewComm.Size = new System.Drawing.Size(132, 48);
+            this.MaskTxtBoxNewComm.SkipLiterals = true;
+            this.MaskTxtBoxNewComm.TabIndex = 4;
+            this.MaskTxtBoxNewComm.TabStop = false;
+            this.MaskTxtBoxNewComm.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.MaskTxtBoxNewComm.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.MaskTxtBoxNewComm.TrailingIcon = global::KomisyonNET.Properties.Resources.commission_50;
+            this.MaskTxtBoxNewComm.UseSystemPasswordChar = false;
+            this.MaskTxtBoxNewComm.ValidatingType = null;
+            // 
+            // solidGauge1
+            // 
+            this.solidGauge1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.solidGauge1.Location = new System.Drawing.Point(235, 15);
+            this.solidGauge1.Margin = new System.Windows.Forms.Padding(15);
+            this.solidGauge1.Name = "solidGauge1";
+            this.solidGauge1.Size = new System.Drawing.Size(238, 91);
+            this.solidGauge1.TabIndex = 0;
+            this.solidGauge1.Text = "solidGauge1";
+            // 
+            // tableLayoutPanel31
+            // 
+            this.tableLayoutPanel31.ColumnCount = 3;
+            this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel31.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel31.Controls.Add(this.mBtnPreview, 1, 0);
+            this.tableLayoutPanel31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel31.Location = new System.Drawing.Point(3, 124);
+            this.tableLayoutPanel31.Name = "tableLayoutPanel31";
+            this.tableLayoutPanel31.RowCount = 1;
+            this.tableLayoutPanel31.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel31.Size = new System.Drawing.Size(214, 25);
+            this.tableLayoutPanel31.TabIndex = 6;
+            // 
+            // mBtnPreview
+            // 
+            this.mBtnPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mBtnPreview.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mBtnPreview.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.mBtnPreview.Depth = 0;
+            this.mBtnPreview.HighEmphasis = true;
+            this.mBtnPreview.Icon = null;
+            this.mBtnPreview.Location = new System.Drawing.Point(32, 0);
+            this.mBtnPreview.Margin = new System.Windows.Forms.Padding(0);
+            this.mBtnPreview.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mBtnPreview.Name = "mBtnPreview";
+            this.mBtnPreview.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.mBtnPreview.Size = new System.Drawing.Size(149, 25);
+            this.mBtnPreview.TabIndex = 5;
+            this.mBtnPreview.Text = "Önizleme";
+            this.mBtnPreview.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.mBtnPreview.UseAccentColor = false;
+            this.mBtnPreview.UseVisualStyleBackColor = true;
+            this.mBtnPreview.Click += new System.EventHandler(this.mBtnPreview_Click);
+            // 
+            // labelTest
+            // 
+            this.labelTest.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTest.AutoSize = true;
+            this.labelTest.Location = new System.Drawing.Point(336, 130);
+            this.labelTest.Name = "labelTest";
+            this.labelTest.Size = new System.Drawing.Size(35, 13);
+            this.labelTest.TabIndex = 7;
+            this.labelTest.Text = "label2";
+            // 
+            // tableLayoutPanel26
+            // 
+            this.tableLayoutPanel26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel26.ColumnCount = 3;
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.tableLayoutPanel26.Controls.Add(this.mCbxPreview, 1, 0);
+            this.tableLayoutPanel26.Location = new System.Drawing.Point(3, 85);
+            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
+            this.tableLayoutPanel26.RowCount = 1;
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(538, 29);
+            this.tableLayoutPanel26.TabIndex = 2;
+            // 
+            // mCbxPreview
+            // 
+            this.mCbxPreview.AutoSize = true;
+            this.mCbxPreview.Depth = 0;
+            this.mCbxPreview.Enabled = false;
+            this.mCbxPreview.Location = new System.Drawing.Point(5, 0);
+            this.mCbxPreview.Margin = new System.Windows.Forms.Padding(0);
+            this.mCbxPreview.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mCbxPreview.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mCbxPreview.Name = "mCbxPreview";
+            this.mCbxPreview.ReadOnly = false;
+            this.mCbxPreview.Ripple = true;
+            this.mCbxPreview.Size = new System.Drawing.Size(355, 29);
+            this.mCbxPreview.TabIndex = 0;
+            this.mCbxPreview.Text = "Yeni Değerler ile Önizleme Yapmak İstiyorum.";
+            this.mCbxPreview.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.mCbxPreview.UseVisualStyleBackColor = true;
+            this.mCbxPreview.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
+            // 
+            // materialCard9
+            // 
+            this.materialCard9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard9.Controls.Add(this.tableLayoutPanel32);
+            this.materialCard9.Depth = 0;
+            this.materialCard9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard9.Location = new System.Drawing.Point(14, 339);
+            this.materialCard9.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard9.Name = "materialCard9";
+            this.materialCard9.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard9.Size = new System.Drawing.Size(516, 231);
+            this.materialCard9.TabIndex = 3;
+            // 
+            // tableLayoutPanel32
+            // 
+            this.tableLayoutPanel32.ColumnCount = 1;
+            this.tableLayoutPanel32.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel32.Controls.Add(this.mListViewTable, 0, 1);
+            this.tableLayoutPanel32.Controls.Add(this.tableLayoutPanel33, 0, 0);
+            this.tableLayoutPanel32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel32.Location = new System.Drawing.Point(14, 14);
+            this.tableLayoutPanel32.Name = "tableLayoutPanel32";
+            this.tableLayoutPanel32.RowCount = 2;
+            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.76355F));
+            this.tableLayoutPanel32.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.23645F));
+            this.tableLayoutPanel32.Size = new System.Drawing.Size(488, 203);
+            this.tableLayoutPanel32.TabIndex = 13;
+            // 
+            // mListViewTable
+            // 
+            this.mListViewTable.AutoSizeTable = false;
+            this.mListViewTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.mListViewTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mListViewTable.CheckBoxes = true;
+            this.mListViewTable.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colNameSurname,
+            this.colTInvoice,
+            this.colFee,
+            this.colCommission,
+            this.colEarn,
+            this.colEarnRate});
+            this.mListViewTable.Depth = 0;
+            this.mListViewTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mListViewTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mListViewTable.FullRowSelect = true;
+            this.mListViewTable.HideSelection = false;
+            this.mListViewTable.Location = new System.Drawing.Point(3, 35);
+            this.mListViewTable.MinimumSize = new System.Drawing.Size(200, 100);
+            this.mListViewTable.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mListViewTable.MouseState = MaterialSkin.MouseState.OUT;
+            this.mListViewTable.Name = "mListViewTable";
+            this.mListViewTable.OwnerDraw = true;
+            this.mListViewTable.Size = new System.Drawing.Size(482, 165);
+            this.mListViewTable.TabIndex = 12;
+            this.mListViewTable.UseCompatibleStateImageBehavior = false;
+            this.mListViewTable.View = System.Windows.Forms.View.Details;
+            // 
+            // colNameSurname
+            // 
+            this.colNameSurname.Text = "İsim Soyisim";
+            this.colNameSurname.Width = 150;
+            // 
+            // colTInvoice
+            // 
+            this.colTInvoice.Text = "Fatura Tutarı";
+            this.colTInvoice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colTInvoice.Width = 130;
+            // 
+            // colFee
+            // 
+            this.colFee.Text = "Aidat Tutarı";
+            this.colFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colFee.Width = 130;
+            // 
+            // colCommission
+            // 
+            this.colCommission.Text = "Komisyon Miktarı";
+            this.colCommission.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colCommission.Width = 150;
+            // 
+            // colEarn
+            // 
+            this.colEarn.Text = "Kazanç";
+            this.colEarn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colEarn.Width = 130;
+            // 
+            // colEarnRate
+            // 
+            this.colEarnRate.Text = "Gelire Katkı (%)";
+            this.colEarnRate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.colEarnRate.Width = 130;
+            // 
+            // tableLayoutPanel33
+            // 
+            this.tableLayoutPanel33.ColumnCount = 4;
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.tableLayoutPanel33.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel33.Controls.Add(this.t, 1, 0);
+            this.tableLayoutPanel33.Controls.Add(this.mRadioBtnEarn, 2, 0);
+            this.tableLayoutPanel33.Controls.Add(this.materialLabel22, 0, 0);
+            this.tableLayoutPanel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel33.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel33.Name = "tableLayoutPanel33";
+            this.tableLayoutPanel33.RowCount = 1;
+            this.tableLayoutPanel33.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel33.Size = new System.Drawing.Size(482, 26);
+            this.tableLayoutPanel33.TabIndex = 13;
+            // 
+            // t
+            // 
+            this.t.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.t.AutoSize = true;
+            this.t.Depth = 0;
+            this.t.Location = new System.Drawing.Point(100, 0);
+            this.t.Margin = new System.Windows.Forms.Padding(0);
+            this.t.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.t.MouseState = MaterialSkin.MouseState.HOVER;
+            this.t.Name = "t";
+            this.t.Ripple = true;
+            this.t.Size = new System.Drawing.Size(150, 26);
+            this.t.TabIndex = 2;
+            this.t.TabStop = true;
+            this.t.Text = "isim Soyisim";
+            this.t.UseVisualStyleBackColor = true;
+            // 
+            // mRadioBtnEarn
+            // 
+            this.mRadioBtnEarn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mRadioBtnEarn.AutoSize = true;
+            this.mRadioBtnEarn.Depth = 0;
+            this.mRadioBtnEarn.Location = new System.Drawing.Point(250, 0);
+            this.mRadioBtnEarn.Margin = new System.Windows.Forms.Padding(0);
+            this.mRadioBtnEarn.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.mRadioBtnEarn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mRadioBtnEarn.Name = "mRadioBtnEarn";
+            this.mRadioBtnEarn.Ripple = true;
+            this.mRadioBtnEarn.Size = new System.Drawing.Size(150, 26);
+            this.mRadioBtnEarn.TabIndex = 3;
+            this.mRadioBtnEarn.TabStop = true;
+            this.mRadioBtnEarn.Text = "Kazanç";
+            this.mRadioBtnEarn.UseVisualStyleBackColor = true;
+            // 
+            // materialLabel22
+            // 
+            this.materialLabel22.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel22.AutoSize = true;
+            this.materialLabel22.Depth = 0;
+            this.materialLabel22.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel22.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle1;
+            this.materialLabel22.Location = new System.Drawing.Point(25, 3);
+            this.materialLabel22.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel22.Name = "materialLabel22";
+            this.materialLabel22.Size = new System.Drawing.Size(50, 19);
+            this.materialLabel22.TabIndex = 4;
+            this.materialLabel22.Text = "Sırala :";
             // 
             // settingsPage
             // 
@@ -803,7 +1675,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.30802F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.69199F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
             this.tableLayoutPanel5.Controls.Add(this.txtBoxExportPath, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.BtnExportPath, 0, 1);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 108);
@@ -824,13 +1696,13 @@
             this.txtBoxExportPath.Enabled = false;
             this.txtBoxExportPath.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtBoxExportPath.LeadingIcon = null;
-            this.txtBoxExportPath.Location = new System.Drawing.Point(93, 25);
+            this.txtBoxExportPath.Location = new System.Drawing.Point(91, 25);
             this.txtBoxExportPath.MaxLength = 50;
             this.txtBoxExportPath.MouseState = MaterialSkin.MouseState.OUT;
             this.txtBoxExportPath.Multiline = false;
             this.txtBoxExportPath.Name = "txtBoxExportPath";
             this.txtBoxExportPath.ReadOnly = true;
-            this.txtBoxExportPath.Size = new System.Drawing.Size(328, 50);
+            this.txtBoxExportPath.Size = new System.Drawing.Size(321, 50);
             this.txtBoxExportPath.TabIndex = 0;
             this.txtBoxExportPath.Text = "";
             this.txtBoxExportPath.TrailingIcon = null;
@@ -848,7 +1720,7 @@
             this.BtnExportPath.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnExportPath.Name = "BtnExportPath";
             this.BtnExportPath.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnExportPath.Size = new System.Drawing.Size(82, 36);
+            this.BtnExportPath.Size = new System.Drawing.Size(80, 36);
             this.BtnExportPath.TabIndex = 1;
             this.BtnExportPath.Text = "Yol Seç :";
             this.BtnExportPath.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
@@ -1117,7 +1989,7 @@
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.09091F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.90909F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel8.Controls.Add(this.materialLabel8, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.mComboBoxLanguage, 1, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 73);
@@ -1134,7 +2006,7 @@
             this.materialLabel8.Depth = 0;
             this.materialLabel8.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialLabel8.FontType = MaterialSkin.MaterialSkinManager.fontType.Button;
-            this.materialLabel8.Location = new System.Drawing.Point(13, 21);
+            this.materialLabel8.Location = new System.Drawing.Point(9, 21);
             this.materialLabel8.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel8.Name = "materialLabel8";
             this.materialLabel8.Size = new System.Drawing.Size(73, 17);
@@ -1161,12 +2033,12 @@
             this.mComboBoxLanguage.Items.AddRange(new object[] {
             "Türkçe",
             "English"});
-            this.mComboBoxLanguage.Location = new System.Drawing.Point(92, 5);
+            this.mComboBoxLanguage.Location = new System.Drawing.Point(88, 5);
             this.mComboBoxLanguage.MaxDropDownItems = 4;
             this.mComboBoxLanguage.MaximumSize = new System.Drawing.Size(190, 0);
             this.mComboBoxLanguage.MouseState = MaterialSkin.MouseState.OUT;
             this.mComboBoxLanguage.Name = "mComboBoxLanguage";
-            this.mComboBoxLanguage.Size = new System.Drawing.Size(107, 49);
+            this.mComboBoxLanguage.Size = new System.Drawing.Size(102, 49);
             this.mComboBoxLanguage.StartIndex = 0;
             this.mComboBoxLanguage.TabIndex = 1;
             // 
@@ -1489,146 +2361,6 @@
             this.ımageListSideNav.Images.SetKeyName(2, "icons8-statistics-32.png");
             this.ımageListSideNav.Images.SetKeyName(3, "icons8-taxi-32.png");
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.tableLayoutPanel19);
-            this.tabPage1.Controls.Add(this.elementHost3);
-            this.tabPage1.Controls.Add(this.solidGauge1);
-            this.tabPage1.Controls.Add(this.materialCard7);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 39);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(889, 621);
-            this.tabPage1.TabIndex = 4;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // elementHost3
-            // 
-            this.elementHost3.Location = new System.Drawing.Point(333, 206);
-            this.elementHost3.Name = "elementHost3";
-            this.elementHost3.Size = new System.Drawing.Size(109, 171);
-            this.elementHost3.TabIndex = 12;
-            this.elementHost3.Text = "elementHost3";
-            this.elementHost3.Child = this.cartesianChart1;
-            // 
-            // materialListView1
-            // 
-            this.materialListView1.AutoSizeTable = false;
-            this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialListView1.CheckBoxes = true;
-            this.materialListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colNameSurname,
-            this.colTInvoice,
-            this.colFee,
-            this.colCommission});
-            this.materialListView1.Depth = 0;
-            this.materialListView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.materialListView1.FullRowSelect = true;
-            this.materialListView1.HideSelection = false;
-            this.materialListView1.Location = new System.Drawing.Point(28, 3);
-            this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
-            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialListView1.Name = "materialListView1";
-            this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(825, 197);
-            this.materialListView1.TabIndex = 11;
-            this.materialListView1.UseCompatibleStateImageBehavior = false;
-            this.materialListView1.View = System.Windows.Forms.View.Details;
-            // 
-            // colNameSurname
-            // 
-            this.colNameSurname.Text = "Ad Soyad";
-            this.colNameSurname.Width = 200;
-            // 
-            // colTInvoice
-            // 
-            this.colTInvoice.Text = "Fatura Tutarı";
-            this.colTInvoice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colTInvoice.Width = 200;
-            // 
-            // colFee
-            // 
-            this.colFee.Text = "Aidat Tutarı";
-            this.colFee.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colFee.Width = 200;
-            // 
-            // colCommission
-            // 
-            this.colCommission.Text = "Komisyon Miktarı";
-            this.colCommission.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.colCommission.Width = 200;
-            // 
-            // solidGauge1
-            // 
-            this.solidGauge1.Location = new System.Drawing.Point(-4, 6);
-            this.solidGauge1.Name = "solidGauge1";
-            this.solidGauge1.Size = new System.Drawing.Size(164, 78);
-            this.solidGauge1.TabIndex = 10;
-            this.solidGauge1.Text = "solidGauge1";
-            // 
-            // elementHost2
-            // 
-            this.elementHost2.Location = new System.Drawing.Point(17, 161);
-            this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(112, 171);
-            this.elementHost2.TabIndex = 9;
-            this.elementHost2.Text = "elementHost2";
-            this.elementHost2.Child = this.cartesianChart2;
-            // 
-            // materialCard7
-            // 
-            this.materialCard7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard7.Controls.Add(this.elementHost1);
-            this.materialCard7.Controls.Add(this.elementHost2);
-            this.materialCard7.Depth = 0;
-            this.materialCard7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard7.Location = new System.Drawing.Point(483, 28);
-            this.materialCard7.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard7.Name = "materialCard7";
-            this.materialCard7.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard7.Size = new System.Drawing.Size(381, 332);
-            this.materialCard7.TabIndex = 8;
-            // 
-            // elementHost1
-            // 
-            this.elementHost1.Location = new System.Drawing.Point(135, 17);
-            this.elementHost1.Name = "elementHost1";
-            this.elementHost1.Size = new System.Drawing.Size(229, 192);
-            this.elementHost1.TabIndex = 0;
-            this.elementHost1.Text = "elementHost1";
-            this.elementHost1.Child = this.pieChart1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(271, 6);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tableLayoutPanel19
-            // 
-            this.tableLayoutPanel19.ColumnCount = 3;
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.941176F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 94.11765F));
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.941176F));
-            this.tableLayoutPanel19.Controls.Add(this.materialListView1, 1, 0);
-            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 415);
-            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
-            this.tableLayoutPanel19.RowCount = 1;
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(883, 203);
-            this.tableLayoutPanel19.TabIndex = 13;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1662,6 +2394,35 @@
             this.tableLayoutPanel13.PerformLayout();
             this.tableLayoutPanel14.ResumeLayout(false);
             this.tableLayoutPanel14.PerformLayout();
+            this.statisticPage.ResumeLayout(false);
+            this.tableLayoutPanel20.ResumeLayout(false);
+            this.tableLayoutPanel21.ResumeLayout(false);
+            this.mCardProfit.ResumeLayout(false);
+            this.tableLayoutPanel22.ResumeLayout(false);
+            this.tableLayoutPanel22.PerformLayout();
+            this.tableLayoutPanel23.ResumeLayout(false);
+            this.tableLayoutPanel23.PerformLayout();
+            this.tableLayoutPanel24.ResumeLayout(false);
+            this.tableLayoutPanel25.ResumeLayout(false);
+            this.tableLayoutPanelRadio.ResumeLayout(false);
+            this.tableLayoutPanelRadio.PerformLayout();
+            this.tableLayoutPanel27.ResumeLayout(false);
+            this.materialCard10.ResumeLayout(false);
+            this.tableLayoutPanel28.ResumeLayout(false);
+            this.tableLayoutPanel28.PerformLayout();
+            this.mCardPreview.ResumeLayout(false);
+            this.tableLayoutPanel29.ResumeLayout(false);
+            this.tableLayoutPanel29.PerformLayout();
+            this.tableLayoutPanel30.ResumeLayout(false);
+            this.tableLayoutPanel30.PerformLayout();
+            this.tableLayoutPanel31.ResumeLayout(false);
+            this.tableLayoutPanel31.PerformLayout();
+            this.tableLayoutPanel26.ResumeLayout(false);
+            this.tableLayoutPanel26.PerformLayout();
+            this.materialCard9.ResumeLayout(false);
+            this.tableLayoutPanel32.ResumeLayout(false);
+            this.tableLayoutPanel33.ResumeLayout(false);
+            this.tableLayoutPanel33.PerformLayout();
             this.settingsPage.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
@@ -1689,9 +2450,6 @@
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel18.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.materialCard7.ResumeLayout(false);
-            this.tableLayoutPanel19.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1772,22 +2530,58 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel21;
         private MaterialSkin.Controls.MaterialLabel materialLabel20;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Integration.ElementHost elementHost3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
+        private MaterialSkin.Controls.MaterialCard mCardProfit;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
+        private MaterialSkin.Controls.MaterialLabel mLabelProfitHeader;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
+        private MaterialSkin.Controls.MaterialLabel materialLabel23;
+        private MaterialSkin.Controls.MaterialLabel mLabelTProfit;
+        private MaterialSkin.Controls.MaterialLabel materialLabel24;
+        private MaterialSkin.Controls.MaterialLabel mLabelTInvoice;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
+        private System.Windows.Forms.Integration.ElementHost elementHost4;
+        private LiveCharts.Wpf.PieChart pieChart1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
+        private System.Windows.Forms.Integration.ElementHost elementHost5;
         private LiveCharts.Wpf.CartesianChart cartesianChart1;
-        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private MaterialSkin.Controls.MaterialRadioButton mRadioBtnColumn;
+        private MaterialSkin.Controls.MaterialRadioButton mRadioBtnStacked;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelRadio;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel27;
+        private MaterialSkin.Controls.MaterialCard materialCard10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel28;
+        private MaterialSkin.Controls.MaterialLabel materialLabel25;
+        private MaterialSkin.Controls.MaterialButton mBtnFileSelect;
+        private MaterialSkin.Controls.MaterialButton mBtnCalculateStatistic;
+        private MaterialSkin.Controls.MaterialButton mBtnClear;
+        private MaterialSkin.Controls.MaterialCheckbox mCbxPreview;
+        private MaterialSkin.Controls.MaterialCard mCardPreview;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
+        private MaterialSkin.Controls.MaterialCard materialCard9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel29;
+        private LiveCharts.WinForms.SolidGauge solidGauge1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel30;
+        private MaterialSkin.Controls.MaterialLabel materialLabel26;
+        private MaterialSkin.Controls.MaterialLabel materialLabel27;
+        private MaterialSkin.Controls.MaterialMaskedTextBox MaskTxtBoxNewFee;
+        private MaterialSkin.Controls.MaterialMaskedTextBox MaskTxtBoxNewComm;
+        private MaterialSkin.Controls.MaterialButton mBtnPreview;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel31;
+        private MaterialSkin.Controls.MaterialListView mListViewTable;
         private System.Windows.Forms.ColumnHeader colNameSurname;
         private System.Windows.Forms.ColumnHeader colTInvoice;
         private System.Windows.Forms.ColumnHeader colFee;
         private System.Windows.Forms.ColumnHeader colCommission;
-        private LiveCharts.WinForms.SolidGauge solidGauge1;
-        private System.Windows.Forms.Integration.ElementHost elementHost2;
-        private LiveCharts.Wpf.CartesianChart cartesianChart2;
-        private MaterialSkin.Controls.MaterialCard materialCard7;
-        private System.Windows.Forms.Integration.ElementHost elementHost1;
-        private LiveCharts.Wpf.PieChart pieChart1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
+        private System.Windows.Forms.ColumnHeader colEarn;
+        private System.Windows.Forms.Label labelTest;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel32;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel33;
+        private System.Windows.Forms.ColumnHeader colEarnRate;
+        private MaterialSkin.Controls.MaterialRadioButton t;
+        private MaterialSkin.Controls.MaterialRadioButton mRadioBtnEarn;
+        private MaterialSkin.Controls.MaterialLabel materialLabel22;
     }
 }
 
