@@ -74,6 +74,7 @@ namespace KomisyonNET
                 exportPathS = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                 conf.SetExportPath(exportPathS);
                 conf.SetIsFt(false);
+                
             }
             else
             {
@@ -95,12 +96,11 @@ namespace KomisyonNET
 
 
             // solid gauge
-            /*
-            solidGauge1.Value = 0;
-            solidGauge1.From = 0;
-            solidGauge1.To = 100;
-            solidGauge1.LabelFormatter = value => "0%";
-            */
+
+            statistics.UpdateSolidGauge(solidGauge1);
+
+            
+            
 
         }
 
@@ -343,7 +343,7 @@ namespace KomisyonNET
                 this.materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
 
                 pictureBoxPTlogo.Image = Properties.Resources.ptLogoDark;
-
+                pictureBoxMainLogo.Image = Properties.Resources.logo_dark;
             }
             else
             {
@@ -351,6 +351,8 @@ namespace KomisyonNET
                 materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
 
                 pictureBoxPTlogo.Image = Properties.Resources.ptLogoWhite;
+
+                pictureBoxMainLogo.Image = Properties.Resources.logo_light;
 
             }
         }
@@ -437,10 +439,6 @@ namespace KomisyonNET
 
                     BtnCalculate.Enabled = true;
 
-                    foreach (var item in pdfFiles)
-                    {
-                        richTextBox1.AppendText(item + "\n");
-                    }
                 }
                 else
                 {
@@ -592,6 +590,11 @@ namespace KomisyonNET
                     mListViewTable.Items.Add(item);
                 }
 
+                
+
+
+
+                mCardTable.Enabled = true;
                 mBtnCalculateStatistic.Enabled = false;
             }
 
@@ -630,11 +633,21 @@ namespace KomisyonNET
             mListViewTable.Items.Clear();
             MaskTxtBoxNewFee.Text = "";
             MaskTxtBoxNewComm.Text = "";
-            solidGauge1.Value = 0;
-            //solidGauge1.Visible = false;
+            statistics.UpdateSolidGauge(solidGauge1);
+            labelTest.Text = "0,00";
 
+            //mRadioBtnEarn.Checked = false;
+            //mRadioBtnName.Checked = false;
 
+            if (mRadioBtnEarn.Checked)
+            {
+                mRadioBtnEarn.Checked = false;
+            }else if (mRadioBtnName.Checked)
+            {
+                mRadioBtnName.Checked = false;
+            }
 
+            mCardTable.Enabled = false;
             mCardPreview.Enabled = false;
             mCbxPreview.Checked = false;
             mCbxPreview.Enabled = false;
@@ -666,35 +679,60 @@ namespace KomisyonNET
 
                 double percentageChange = statistics.CalculatePercentageChange(oldIncome, newIncome);
 
-                // UI thread'inde SolidGauge güncelle
                 
-                //this.Invoke((MethodInvoker)delegate
-                //{
-                //    labelTest.Text = $"Eski: {oldIncome:N2} Yeni: {newIncome:N2} Yüzde: {percentageChange:N2}%";
-                //    SolidGauge solidG = statistics.UpdateSolidGauge(percentageChange);
-                //    solidGauge1.From = solidG.From;
-                //    solidGauge1.To = solidG.To;
-                //    solidGauge1.FromColor = solidG.FromColor;
-                //    solidGauge1.ToColor = solidG.ToColor;
-                //    solidGauge1.Base.LabelsVisibility = solidG.Base.LabelsVisibility;
-                //    solidGauge1.Base.Foreground = solidG.Base.Foreground;
-                //    solidGauge1.LabelFormatter = solidG.LabelFormatter;
-                //});
-                labelTest.Text = $"Eski: {oldIncome:N2} Yeni: {newIncome:N2} Yüzde: {percentageChange:N2}%";
-                SolidGauge solidG = statistics.UpdateSolidGauge(percentageChange);
-                solidGauge1.From = solidG.From;
-                solidGauge1.To = solidG.To;
-                solidGauge1.FromColor = solidG.FromColor;
-                solidGauge1.ToColor = solidG.ToColor;
-                solidGauge1.Base.LabelsVisibility = solidG.Base.LabelsVisibility;
-                solidGauge1.Base.Foreground = solidG.Base.Foreground;
-                solidGauge1.LabelFormatter = solidG.LabelFormatter;
+                labelTest.Text = $"{Math.Round(newIncome - oldIncome):N2}";
 
+                
+                statistics.UpdateSolidGauge(solidGauge1, percentageChange);
+
+ 
 
             }
 
 
 
         }
+
+        private void mRadioBtnName_CheckedChanged(object sender, EventArgs e)
+        {
+            if (mRadioBtnName.Checked)
+            {
+                mListViewTable.Items.Clear();
+                var p = statistics.TotalProfit(statisticModels);
+                foreach (var model in statisticModels.OrderBy(x => x.nameSurname))
+                {
+                    var item = new ListViewItem();
+                    item.SubItems[0].Text = model.nameSurname;
+                    item.SubItems.Add(model.tInvoice.ToString());
+                    item.SubItems.Add(model.fee.ToString());
+                    item.SubItems.Add(model.commission.ToString());
+                    item.SubItems.Add((model.fee + model.commission).ToString());
+                    item.SubItems.Add(((model.fee + model.commission) / p * 100).ToString("N6"));
+                    mListViewTable.Items.Add(item);
+                }
+            }
+        }
+
+        private void mRadioBtnEarn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (mRadioBtnEarn.Checked)
+            {
+                mListViewTable.Items.Clear();
+                var p = statistics.TotalProfit(statisticModels);
+                foreach (var model in statisticModels.OrderByDescending(x => x.fee + x.commission))
+                {
+                    var item = new ListViewItem();
+                    item.SubItems[0].Text = model.nameSurname;
+                    item.SubItems.Add(model.tInvoice.ToString());
+                    item.SubItems.Add(model.fee.ToString());
+                    item.SubItems.Add(model.commission.ToString());
+                    item.SubItems.Add((model.fee + model.commission).ToString());
+                    item.SubItems.Add(((model.fee + model.commission) / p * 100).ToString("N6"));
+                    mListViewTable.Items.Add(item);
+                }
+            }
+        }
+
+        
     }
 }

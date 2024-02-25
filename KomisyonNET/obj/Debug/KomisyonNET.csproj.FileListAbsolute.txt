@@ -68,3 +68,8 @@ C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\LiveCharts.Win
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\LiveCharts.WinForms.xml
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\KomisyonNET.exe.manifest
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\KomisyonNET.application
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.TrustInfo.xml
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.exe.manifest
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.application

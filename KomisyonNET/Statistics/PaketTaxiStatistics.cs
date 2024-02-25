@@ -179,9 +179,10 @@ namespace KomisyonNET.Statistics
         }
 
         //public void UpdateSolidGauge(SolidGauge solidGauge, double percentageChange)
-        public SolidGauge UpdateSolidGauge(double percentageChange)
+        public void UpdateSolidGauge(SolidGauge solidGauge, double percentageChange = 0)
         {
-            var solidGauge = new SolidGauge();
+
+           
             solidGauge.Value = Math.Abs(percentageChange); // Değerin mutlak değerini ayarla
 
             if (percentageChange > 0)
@@ -193,8 +194,9 @@ namespace KomisyonNET.Statistics
                 solidGauge.ToColor = Colors.LightGreen;
                 solidGauge.Base.LabelsVisibility = Visibility.Visible;
                 solidGauge.Base.Foreground = new SolidColorBrush(Colors.Green);
-                solidGauge.LabelFormatter = value => "+" + value.ToString("0.##") + "%";
-                return solidGauge;
+                solidGauge.LabelFormatter = value => value.ToString("0.##") + "%";
+                solidGauge.Refresh();
+                
             }
             else if (percentageChange < 0)
             {
@@ -205,8 +207,8 @@ namespace KomisyonNET.Statistics
                 solidGauge.ToColor = Colors.OrangeRed;
                 solidGauge.Base.LabelsVisibility = Visibility.Visible;
                 solidGauge.Base.Foreground = new SolidColorBrush(Colors.Red);
-                solidGauge.LabelFormatter = value => "-" + value.ToString("0.##") + "%";
-                return solidGauge;
+                solidGauge.LabelFormatter = value => value.ToString("0.##") + "%";
+                solidGauge.Refresh();
             }
             else
             {
@@ -217,8 +219,8 @@ namespace KomisyonNET.Statistics
                 solidGauge.ToColor = Colors.LightGray;
                 solidGauge.Base.LabelsVisibility = Visibility.Visible;
                 solidGauge.Base.Foreground = new SolidColorBrush(Colors.Gray);
-                solidGauge.LabelFormatter = value => "0%";
-                return solidGauge;
+                solidGauge.LabelFormatter = value => value.ToString("0.##") + "%";
+                solidGauge.Refresh();
             }
         }
 

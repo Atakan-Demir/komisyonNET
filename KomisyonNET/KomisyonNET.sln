@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KomisyonNET", "KomisyonNET.csproj", "{9C964532-0678-4882-8A26-9A31AB04E16F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "..\Setup\Setup.vdproj", "{77E3DFD3-8588-4F85-8C53-A3EFC491C255}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{9C964532-0678-4882-8A26-9A31AB04E16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C964532-0678-4882-8A26-9A31AB04E16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C964532-0678-4882-8A26-9A31AB04E16F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77E3DFD3-8588-4F85-8C53-A3EFC491C255}.Debug|Any CPU.ActiveCfg = Debug
+		{77E3DFD3-8588-4F85-8C53-A3EFC491C255}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
