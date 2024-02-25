@@ -27,4 +27,4 @@ KomisyonNET'in kurulumu basit ve doğrudandır. Aşağıdaki adımları takip ed
 1. Setup/Debug klasörünün içindeki 'setup.exe' yi çalıştırın.
 2. Kurulum sihirbazının talimatlarını takip edin.
 3. Kurulum tamamlandıktan sonra, uygulamayı başlatın ve Paket Taxi faturalarınızı işlemeye başlayın.
-4. Test için Setup içindeki örnek faturaları kullanabilirsiniz.
+4. Test için 'Setup/faturalar' içindeki örnek faturaları kullanabilirsiniz.
