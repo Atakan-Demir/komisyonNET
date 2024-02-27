@@ -464,6 +464,8 @@ namespace KomisyonNET
         #region RefreshMainForm
         private void OpenFormProgress()
         {
+            this.Hide();
+
             FormProgress formProgress = new FormProgress();
             // evente metod at
             formProgress.ProgressCompleted += FormProgress_ProgressCompleted;
@@ -485,6 +487,7 @@ namespace KomisyonNET
 
         private void RefreshMainForm()
         {
+            this.Show();
             pdfFiles = null;
             txtBoxFolderPath.Clear();
             BtnCalculate.Enabled = false;
@@ -501,18 +504,6 @@ namespace KomisyonNET
 
 
         #region Statistic
-
-
-
-
-
-        #endregion
-
-
-
-
-
-
 
         private void mRadioBtnColumn_CheckedChanged(object sender, EventArgs e)
         {
@@ -590,7 +581,7 @@ namespace KomisyonNET
                     mListViewTable.Items.Add(item);
                 }
 
-                
+
 
 
 
@@ -638,11 +629,15 @@ namespace KomisyonNET
 
             //mRadioBtnEarn.Checked = false;
             //mRadioBtnName.Checked = false;
-
+            if (!mRadioBtnStacked.Checked)
+            {
+                mRadioBtnStacked.Checked = true;
+            }
             if (mRadioBtnEarn.Checked)
             {
                 mRadioBtnEarn.Checked = false;
-            }else if (mRadioBtnName.Checked)
+            }
+            else if (mRadioBtnName.Checked)
             {
                 mRadioBtnName.Checked = false;
             }
@@ -662,7 +657,7 @@ namespace KomisyonNET
         private void mBtnPreview_Click(object sender, EventArgs e)
         {
             //clear solid gauge
-            
+
 
             double oldIncome = statistics.TotalProfit(statisticModels);
             // check if new fee and commission is empty or not double
@@ -679,13 +674,13 @@ namespace KomisyonNET
 
                 double percentageChange = statistics.CalculatePercentageChange(oldIncome, newIncome);
 
-                
+
                 labelTest.Text = $"{Math.Round(newIncome - oldIncome):N2}";
 
-                
+
                 statistics.UpdateSolidGauge(solidGauge1, percentageChange);
 
- 
+
 
             }
 
@@ -733,6 +728,8 @@ namespace KomisyonNET
             }
         }
 
-        
+      #endregion
+
+
     }
 }

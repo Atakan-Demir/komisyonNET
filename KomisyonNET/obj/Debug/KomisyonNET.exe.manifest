@@ -103,14 +103,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KomisyonNET.exe" size="375704">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KomisyonNET.exe" size="376216">
       <assemblyIdentity name="KomisyonNET" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UrPGtpa4/fJ5yTZAL8EQu2pYSvY4f3Va8eC5DMtI7pQ=</dsig:DigestValue>
+        <dsig:DigestValue>JK+KilEPneBHtwssEkDdv2gVd5WqH2FOLag8XAAhOy4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

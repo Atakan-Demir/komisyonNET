@@ -109,6 +109,12 @@ namespace KomisyonNET
             BtnClose.Enabled = true;
             BtnOpenExcel.Visible = true;
             mLabelInfo.Text = "** İşlemler Tamamlandı.";
+            // if formProgress minimized, show formProgress
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            
         }
 
         private void BtnOpenExcel_Click(object sender, EventArgs e)
@@ -130,6 +136,13 @@ namespace KomisyonNET
             base.OnFormClosed(e);
             // Eventi tetikle
             ProgressCompleted?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void mBtnMinimize_Click(object sender, EventArgs e)
+        {
+            // minimize form
+            this.WindowState = FormWindowState.Minimized;
+
         }
     }
 }

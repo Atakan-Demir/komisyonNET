@@ -34,6 +34,18 @@
             this.homePage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.materialLabel29 = new MaterialSkin.Controls.MaterialLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.materialLabel30 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel31 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel32 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel33 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel34 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel35 = new MaterialSkin.Controls.MaterialLabel();
+            this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBoxMainLogo = new System.Windows.Forms.PictureBox();
+            this.materialLabel36 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.pTaxiPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
@@ -152,22 +164,14 @@
             this.materialLabel21 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel20 = new MaterialSkin.Controls.MaterialLabel();
             this.ımageListSideNav = new System.Windows.Forms.ImageList(this.components);
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.materialLabel29 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.materialLabel30 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel31 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel32 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel33 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel34 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel35 = new MaterialSkin.Controls.MaterialLabel();
-            this.tableLayoutPanel34 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxMainLogo = new System.Windows.Forms.PictureBox();
-            this.materialLabel36 = new MaterialSkin.Controls.MaterialLabel();
             this.materialTabControl1.SuspendLayout();
             this.homePage.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.materialCard1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel34.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainLogo)).BeginInit();
             this.pTaxiPage.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.materialCard5.SuspendLayout();
@@ -215,10 +219,6 @@
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel34.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -287,18 +287,203 @@
             this.materialCard1.Size = new System.Drawing.Size(766, 500);
             this.materialCard1.TabIndex = 0;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
+            this.tableLayoutPanel2.Controls.Add(this.materialLabel29, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.materialLabel30, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.materialLabel31, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.materialLabel32, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.materialLabel33, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.materialLabel34, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.materialLabel35, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel34, 1, 9);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(14, 14);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 10;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(738, 472);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // materialLabel29
+            // 
+            this.materialLabel29.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel29.AutoSize = true;
+            this.materialLabel29.Depth = 0;
+            this.materialLabel29.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel29.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
+            this.materialLabel29.Location = new System.Drawing.Point(305, 4);
+            this.materialLabel29.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel29.Name = "materialLabel29";
+            this.materialLabel29.Size = new System.Drawing.Size(127, 29);
+            this.materialLabel29.TabIndex = 0;
+            this.materialLabel29.Text = "Hoşgeldiniz";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(10, 40);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(717, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // materialLabel30
+            // 
+            this.materialLabel30.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel30.AutoSize = true;
+            this.materialLabel30.Depth = 0;
+            this.materialLabel30.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel30.Location = new System.Drawing.Point(49, 178);
+            this.materialLabel30.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel30.Name = "materialLabel30";
+            this.materialLabel30.Size = new System.Drawing.Size(639, 18);
+            this.materialLabel30.TabIndex = 2;
+            this.materialLabel30.Text = "KomisyonNET, muhasebe ofislerinin ihtiyaçlarına özel olarak tasarlanmış bir yazıl" +
+    "ımdır. Bu";
+            // 
+            // materialLabel31
+            // 
+            this.materialLabel31.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel31.AutoSize = true;
+            this.materialLabel31.Depth = 0;
+            this.materialLabel31.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel31.Location = new System.Drawing.Point(57, 196);
+            this.materialLabel31.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel31.Name = "materialLabel31";
+            this.materialLabel31.Size = new System.Drawing.Size(623, 18);
+            this.materialLabel31.TabIndex = 3;
+            this.materialLabel31.Text = "platform, paket taxi faturalarının kolayca hesaplanması, analiz edilmesi ve rapor" +
+    "lanması";
+            // 
+            // materialLabel32
+            // 
+            this.materialLabel32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel32.AutoSize = true;
+            this.materialLabel32.Depth = 0;
+            this.materialLabel32.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel32.Location = new System.Drawing.Point(34, 214);
+            this.materialLabel32.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel32.Name = "materialLabel32";
+            this.materialLabel32.Size = new System.Drawing.Size(669, 18);
+            this.materialLabel32.TabIndex = 4;
+            this.materialLabel32.Text = "için geliştirilmiştir. Kullanıcı dostu arayüzü ile faturalarınızı hızlıca işleyeb" +
+    "ilir, aidat ve komisyon";
+            // 
+            // materialLabel33
+            // 
+            this.materialLabel33.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel33.AutoSize = true;
+            this.materialLabel33.Depth = 0;
+            this.materialLabel33.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel33.Location = new System.Drawing.Point(18, 232);
+            this.materialLabel33.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel33.Name = "materialLabel33";
+            this.materialLabel33.Size = new System.Drawing.Size(700, 18);
+            this.materialLabel33.TabIndex = 5;
+            this.materialLabel33.Text = "hesaplamalarını otomatik olarak yapabilirsiniz. Ayrıca, elde edilen verileri graf" +
+    "iklerle görselleştirerek ";
+            // 
+            // materialLabel34
+            // 
+            this.materialLabel34.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel34.AutoSize = true;
+            this.materialLabel34.Depth = 0;
+            this.materialLabel34.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel34.Location = new System.Drawing.Point(179, 250);
+            this.materialLabel34.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel34.Name = "materialLabel34";
+            this.materialLabel34.Size = new System.Drawing.Size(378, 18);
+            this.materialLabel34.TabIndex = 6;
+            this.materialLabel34.Text = "iş performansınızı detaylı bir şekilde inceleyebilirsiniz.";
+            // 
+            // materialLabel35
+            // 
+            this.materialLabel35.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel35.AutoSize = true;
+            this.materialLabel35.Depth = 0;
+            this.materialLabel35.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel35.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
+            this.materialLabel35.Location = new System.Drawing.Point(64, 286);
+            this.materialLabel35.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel35.Name = "materialLabel35";
+            this.materialLabel35.Size = new System.Drawing.Size(609, 17);
+            this.materialLabel35.TabIndex = 7;
+            this.materialLabel35.Text = "KomisyonNET, muhasebe süreçlerinizi basitleştirmek ve iş akışınızı optimize etmek" +
+    " için burada!";
+            // 
+            // tableLayoutPanel34
+            // 
+            this.tableLayoutPanel34.ColumnCount = 3;
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98F));
+            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
+            this.tableLayoutPanel34.Controls.Add(this.pictureBoxMainLogo, 1, 2);
+            this.tableLayoutPanel34.Controls.Add(this.materialLabel36, 1, 1);
+            this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel34.Location = new System.Drawing.Point(10, 307);
+            this.tableLayoutPanel34.Name = "tableLayoutPanel34";
+            this.tableLayoutPanel34.RowCount = 3;
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.064517F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.63772F));
+            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.29777F));
+            this.tableLayoutPanel34.Size = new System.Drawing.Size(717, 162);
+            this.tableLayoutPanel34.TabIndex = 8;
+            // 
+            // pictureBoxMainLogo
+            // 
+            this.pictureBoxMainLogo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxMainLogo.Image = global::KomisyonNET.Properties.Resources.logo_light;
+            this.pictureBoxMainLogo.Location = new System.Drawing.Point(10, 67);
+            this.pictureBoxMainLogo.Name = "pictureBoxMainLogo";
+            this.pictureBoxMainLogo.Size = new System.Drawing.Size(696, 92);
+            this.pictureBoxMainLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMainLogo.TabIndex = 0;
+            this.pictureBoxMainLogo.TabStop = false;
+            // 
+            // materialLabel36
+            // 
+            this.materialLabel36.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel36.AutoSize = true;
+            this.materialLabel36.Depth = 0;
+            this.materialLabel36.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel36.FontType = MaterialSkin.MaterialSkinManager.fontType.Body2;
+            this.materialLabel36.Location = new System.Drawing.Point(64, 30);
+            this.materialLabel36.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel36.Name = "materialLabel36";
+            this.materialLabel36.Size = new System.Drawing.Size(587, 17);
+            this.materialLabel36.TabIndex = 1;
+            this.materialLabel36.Text = "**NOT: \"Ayarlar\" sekmesinden kendinize uygun \'Aidat\' ve \'Komisyon\' değerlerini be" +
+    "lirleyebilirsiniz.";
+            // 
             // materialLabel1
             // 
             this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(275, 583);
+            this.materialLabel1.Location = new System.Drawing.Point(349, 583);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(331, 19);
+            this.materialLabel1.Size = new System.Drawing.Size(183, 19);
             this.materialLabel1.TabIndex = 1;
-            this.materialLabel1.Text = "© 2024 by Atakan Demir. Tüm Hakları Saklıdır.";
+            this.materialLabel1.Text = "© 2024 by Atakan Demir. ";
             // 
             // pTaxiPage
             // 
@@ -1627,7 +1812,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.30802F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.69199F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
             this.tableLayoutPanel5.Controls.Add(this.txtBoxExportPath, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.BtnExportPath, 0, 1);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 108);
@@ -1654,7 +1839,7 @@
             this.txtBoxExportPath.Multiline = false;
             this.txtBoxExportPath.Name = "txtBoxExportPath";
             this.txtBoxExportPath.ReadOnly = true;
-            this.txtBoxExportPath.Size = new System.Drawing.Size(318, 50);
+            this.txtBoxExportPath.Size = new System.Drawing.Size(317, 50);
             this.txtBoxExportPath.TabIndex = 0;
             this.txtBoxExportPath.Text = "";
             this.txtBoxExportPath.TrailingIcon = null;
@@ -1941,7 +2126,7 @@
             this.tableLayoutPanel8.ColumnCount = 3;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.09091F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.90909F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 59F));
             this.tableLayoutPanel8.Controls.Add(this.materialLabel8, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.mComboBoxLanguage, 1, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 73);
@@ -1990,7 +2175,7 @@
             this.mComboBoxLanguage.MaximumSize = new System.Drawing.Size(190, 0);
             this.mComboBoxLanguage.MouseState = MaterialSkin.MouseState.OUT;
             this.mComboBoxLanguage.Name = "mComboBoxLanguage";
-            this.mComboBoxLanguage.Size = new System.Drawing.Size(100, 49);
+            this.mComboBoxLanguage.Size = new System.Drawing.Size(99, 49);
             this.mComboBoxLanguage.StartIndex = 0;
             this.mComboBoxLanguage.TabIndex = 1;
             // 
@@ -2313,191 +2498,6 @@
             this.ımageListSideNav.Images.SetKeyName(2, "icons8-statistics-32.png");
             this.ımageListSideNav.Images.SetKeyName(3, "icons8-taxi-32.png");
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel29, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel30, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel31, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel32, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel33, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel34, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.materialLabel35, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel34, 1, 9);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(14, 14);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 10;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(738, 472);
-            this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // materialLabel29
-            // 
-            this.materialLabel29.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel29.AutoSize = true;
-            this.materialLabel29.Depth = 0;
-            this.materialLabel29.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel29.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
-            this.materialLabel29.Location = new System.Drawing.Point(305, 4);
-            this.materialLabel29.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel29.Name = "materialLabel29";
-            this.materialLabel29.Size = new System.Drawing.Size(127, 29);
-            this.materialLabel29.TabIndex = 0;
-            this.materialLabel29.Text = "Hoşgeldiniz";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 40);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(717, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // materialLabel30
-            // 
-            this.materialLabel30.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel30.AutoSize = true;
-            this.materialLabel30.Depth = 0;
-            this.materialLabel30.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel30.Location = new System.Drawing.Point(49, 178);
-            this.materialLabel30.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel30.Name = "materialLabel30";
-            this.materialLabel30.Size = new System.Drawing.Size(639, 18);
-            this.materialLabel30.TabIndex = 2;
-            this.materialLabel30.Text = "KomisyonNET, muhasebe ofislerinin ihtiyaçlarına özel olarak tasarlanmış bir yazıl" +
-    "ımdır. Bu";
-            // 
-            // materialLabel31
-            // 
-            this.materialLabel31.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel31.AutoSize = true;
-            this.materialLabel31.Depth = 0;
-            this.materialLabel31.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel31.Location = new System.Drawing.Point(57, 196);
-            this.materialLabel31.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel31.Name = "materialLabel31";
-            this.materialLabel31.Size = new System.Drawing.Size(623, 18);
-            this.materialLabel31.TabIndex = 3;
-            this.materialLabel31.Text = "platform, paket taxi faturalarının kolayca hesaplanması, analiz edilmesi ve rapor" +
-    "lanması";
-            // 
-            // materialLabel32
-            // 
-            this.materialLabel32.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel32.AutoSize = true;
-            this.materialLabel32.Depth = 0;
-            this.materialLabel32.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel32.Location = new System.Drawing.Point(34, 214);
-            this.materialLabel32.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel32.Name = "materialLabel32";
-            this.materialLabel32.Size = new System.Drawing.Size(669, 18);
-            this.materialLabel32.TabIndex = 4;
-            this.materialLabel32.Text = "için geliştirilmiştir. Kullanıcı dostu arayüzü ile faturalarınızı hızlıca işleyeb" +
-    "ilir, aidat ve komisyon";
-            // 
-            // materialLabel33
-            // 
-            this.materialLabel33.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel33.AutoSize = true;
-            this.materialLabel33.Depth = 0;
-            this.materialLabel33.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel33.Location = new System.Drawing.Point(18, 232);
-            this.materialLabel33.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel33.Name = "materialLabel33";
-            this.materialLabel33.Size = new System.Drawing.Size(700, 18);
-            this.materialLabel33.TabIndex = 5;
-            this.materialLabel33.Text = "hesaplamalarını otomatik olarak yapabilirsiniz. Ayrıca, elde edilen verileri graf" +
-    "iklerle görselleştirerek ";
-            // 
-            // materialLabel34
-            // 
-            this.materialLabel34.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel34.AutoSize = true;
-            this.materialLabel34.Depth = 0;
-            this.materialLabel34.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel34.Location = new System.Drawing.Point(179, 250);
-            this.materialLabel34.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel34.Name = "materialLabel34";
-            this.materialLabel34.Size = new System.Drawing.Size(378, 18);
-            this.materialLabel34.TabIndex = 6;
-            this.materialLabel34.Text = "iş performansınızı detaylı bir şekilde inceleyebilirsiniz.";
-            // 
-            // materialLabel35
-            // 
-            this.materialLabel35.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel35.AutoSize = true;
-            this.materialLabel35.Depth = 0;
-            this.materialLabel35.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel35.FontType = MaterialSkin.MaterialSkinManager.fontType.Subtitle2;
-            this.materialLabel35.Location = new System.Drawing.Point(64, 286);
-            this.materialLabel35.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel35.Name = "materialLabel35";
-            this.materialLabel35.Size = new System.Drawing.Size(609, 17);
-            this.materialLabel35.TabIndex = 7;
-            this.materialLabel35.Text = "KomisyonNET, muhasebe süreçlerinizi basitleştirmek ve iş akışınızı optimize etmek" +
-    " için burada!";
-            // 
-            // tableLayoutPanel34
-            // 
-            this.tableLayoutPanel34.ColumnCount = 3;
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98F));
-            this.tableLayoutPanel34.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1F));
-            this.tableLayoutPanel34.Controls.Add(this.pictureBoxMainLogo, 1, 2);
-            this.tableLayoutPanel34.Controls.Add(this.materialLabel36, 1, 1);
-            this.tableLayoutPanel34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel34.Location = new System.Drawing.Point(10, 307);
-            this.tableLayoutPanel34.Name = "tableLayoutPanel34";
-            this.tableLayoutPanel34.RowCount = 3;
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.064517F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.63772F));
-            this.tableLayoutPanel34.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.29777F));
-            this.tableLayoutPanel34.Size = new System.Drawing.Size(717, 162);
-            this.tableLayoutPanel34.TabIndex = 8;
-            // 
-            // pictureBoxMainLogo
-            // 
-            this.pictureBoxMainLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBoxMainLogo.Image = global::KomisyonNET.Properties.Resources.logo_light;
-            this.pictureBoxMainLogo.Location = new System.Drawing.Point(10, 67);
-            this.pictureBoxMainLogo.Name = "pictureBoxMainLogo";
-            this.pictureBoxMainLogo.Size = new System.Drawing.Size(696, 92);
-            this.pictureBoxMainLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxMainLogo.TabIndex = 0;
-            this.pictureBoxMainLogo.TabStop = false;
-            // 
-            // materialLabel36
-            // 
-            this.materialLabel36.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel36.AutoSize = true;
-            this.materialLabel36.Depth = 0;
-            this.materialLabel36.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel36.FontType = MaterialSkin.MaterialSkinManager.fontType.Body2;
-            this.materialLabel36.Location = new System.Drawing.Point(64, 30);
-            this.materialLabel36.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel36.Name = "materialLabel36";
-            this.materialLabel36.Size = new System.Drawing.Size(587, 17);
-            this.materialLabel36.TabIndex = 1;
-            this.materialLabel36.Text = "**NOT: \"Ayarlar\" sekmesinden kendinize uygun \'Aidat\' ve \'Komisyon\' değerlerini be" +
-    "lirleyebilirsiniz.";
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2519,6 +2519,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.materialCard1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel34.ResumeLayout(false);
+            this.tableLayoutPanel34.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainLogo)).EndInit();
             this.pTaxiPage.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.materialCard5.ResumeLayout(false);
@@ -2588,12 +2594,6 @@
             this.tableLayoutPanel17.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel18.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel34.ResumeLayout(false);
-            this.tableLayoutPanel34.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMainLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

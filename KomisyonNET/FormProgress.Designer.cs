@@ -40,6 +40,7 @@
             this.BtnClose = new MaterialSkin.Controls.MaterialButton();
             this.mLabelInfo = new MaterialSkin.Controls.MaterialLabel();
             this.BtnOpenExcel = new MaterialSkin.Controls.MaterialButton();
+            this.mBtnMinimize = new MaterialSkin.Controls.MaterialButton();
             this.materialCard1.SuspendLayout();
             this.materialExpansionPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -208,6 +209,27 @@
             this.BtnOpenExcel.Visible = false;
             this.BtnOpenExcel.Click += new System.EventHandler(this.BtnOpenExcel_Click);
             // 
+            // mBtnMinimize
+            // 
+            this.mBtnMinimize.AutoSize = false;
+            this.mBtnMinimize.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mBtnMinimize.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.mBtnMinimize.Depth = 0;
+            this.mBtnMinimize.HighEmphasis = true;
+            this.mBtnMinimize.Icon = null;
+            this.mBtnMinimize.Location = new System.Drawing.Point(552, 3);
+            this.mBtnMinimize.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.mBtnMinimize.MouseState = MaterialSkin.MouseState.HOVER;
+            this.mBtnMinimize.Name = "mBtnMinimize";
+            this.mBtnMinimize.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.mBtnMinimize.Size = new System.Drawing.Size(37, 36);
+            this.mBtnMinimize.TabIndex = 7;
+            this.mBtnMinimize.Text = "__";
+            this.mBtnMinimize.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.mBtnMinimize.UseAccentColor = true;
+            this.mBtnMinimize.UseVisualStyleBackColor = true;
+            this.mBtnMinimize.Click += new System.EventHandler(this.mBtnMinimize_Click);
+            // 
             // FormProgress
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,6 +237,7 @@
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(10, 10);
             this.ClientSize = new System.Drawing.Size(650, 401);
+            this.Controls.Add(this.mBtnMinimize);
             this.Controls.Add(this.BtnOpenExcel);
             this.Controls.Add(this.mLabelInfo);
             this.Controls.Add(this.BtnClose);
@@ -229,7 +252,7 @@
             this.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.Sizable = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormProgress";
+            this.Text = "KomisyonNet processing";
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
             this.materialExpansionPanel1.ResumeLayout(false);
@@ -253,5 +276,6 @@
         private MaterialSkin.Controls.MaterialButton BtnClose;
         private MaterialSkin.Controls.MaterialLabel mLabelInfo;
         private MaterialSkin.Controls.MaterialButton BtnOpenExcel;
+        private MaterialSkin.Controls.MaterialButton mBtnMinimize;
     }
 }
