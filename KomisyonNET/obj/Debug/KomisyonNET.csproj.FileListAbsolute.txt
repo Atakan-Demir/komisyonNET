@@ -11,7 +11,6 @@ C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.ex
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.pdb
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.FormMain.resources
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.FormProgress.resources
-C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\libHarfBuzzSharp.dll
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\x86\libHarfBuzzSharp.dll
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\x64\libHarfBuzzSharp.dll
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\arm64\libHarfBuzzSharp.dll
@@ -73,3 +72,4 @@ C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\KomisyonNET.ap
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.TrustInfo.xml
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.exe.manifest
 C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\obj\Debug\KomisyonNET.application
+C:\Users\demir\Documents\GitHub\komisyonNET\KomisyonNET\bin\Debug\HarfBuzzSharp.pdb

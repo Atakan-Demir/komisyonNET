@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="KomisyonNET.exe.manifest" size="25174">
+    <dependentAssembly dependencyType="install" codebase="KomisyonNET.exe.manifest" size="25183">
       <assemblyIdentity name="KomisyonNET.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="tr-TR" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>F98P9jz2k2LZyvXgyNejvOcqWL9Bkmnrx0Bq543XC30=</dsig:DigestValue>
+        <dsig:DigestValue>RNEHGj5Hb5igBOHUfPsKCb2K7X2cp70aKtKLqli1azI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

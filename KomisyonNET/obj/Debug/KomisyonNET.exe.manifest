@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HarfBuzzSharp.dll" size="85104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HarfBuzzSharp.dll" size="215984">
       <assemblyIdentity name="HarfBuzzSharp" version="1.0.0.0" publicKeyToken="0738EB9F132ED756" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/TppOCBFb/Wpvv6JCwKXJeg/VyxhhZ8018ynIbrRmpI=</dsig:DigestValue>
+        <dsig:DigestValue>4L9Cyo8o/Xjv6TTUIOg99fkA2wjia74MpMOmYjhxoQY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -331,14 +331,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Memory.dll" size="141184">
-      <assemblyIdentity name="System.Memory" version="4.0.1.1" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Memory.dll" size="142240">
+      <assemblyIdentity name="System.Memory" version="4.0.1.2" publicKeyToken="CC7B13FFCD2DDD51" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jnYxjosGaSq/fasRadJ9FVV/fwo002r2Rj7/D+ISE8c=</dsig:DigestValue>
+        <dsig:DigestValue>vz+4RmT0CX8aipvHGlHc+M8akF1AgKTSkNoXMIZuhW8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -355,14 +355,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Runtime.CompilerServices.Unsafe.dll" size="16968">
-      <assemblyIdentity name="System.Runtime.CompilerServices.Unsafe" version="4.0.6.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="System.Runtime.CompilerServices.Unsafe.dll" size="18024">
+      <assemblyIdentity name="System.Runtime.CompilerServices.Unsafe" version="6.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>ktU13RZTJQ2mYsOluSlDyAMGURdsgaUJzXTitL7CbP8=</dsig:DigestValue>
+        <dsig:DigestValue>N3aEiOjvRXKbx9miZ3YzxkUAQpdbuWUW4YbabLnNDc8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -378,40 +378,31 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="arm64\libHarfBuzzSharp.dll" size="928368">
+  <file name="arm64\libHarfBuzzSharp.dll" size="1747376">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>cTe/GSUf5eTcQbUAVJHOCJgiTfndu7LJ819NirvuWSQ=</dsig:DigestValue>
+      <dsig:DigestValue>xONDxQPSWKN58HLZRWBoxuPjODuCj9Vqy0YRex1wzWM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="KomisyonNET.exe.config" size="3865">
+  <file name="KomisyonNET.exe.config" size="4102">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5KkceXzykZ9t544sA8B/BQWW4KYZ8cY17A3jNS5wxUw=</dsig:DigestValue>
+      <dsig:DigestValue>prX+nSaWS9vt78tX6A3QLORBbrgjdmYHz/r/t19zgr8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="libHarfBuzzSharp.dll" size="794736">
+  <file name="libHarfBuzzSharp.dylib" size="2683424">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>8ppqxIy7+VxY39SnA+bvCzmZNPb6sreyDVNhBoFpMkA=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="libHarfBuzzSharp.dylib" size="873056">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>JgJEHwOJwqWF3yelmzbclvqXlKu2H6QVR0ftGqjLHUg=</dsig:DigestValue>
+      <dsig:DigestValue>yiDdhdAgSnvaorbrT2vRdIbYxuhgQ3BS3imghTjeCF4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="logo32.ico" size="4286">
@@ -423,13 +414,22 @@
       <dsig:DigestValue>BAKEmamMSuFCceWvoVLsmejxG2mkQtcp4Db/5ALaQ/E=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="x64\libHarfBuzzSharp.dll" size="877168">
+  <file name="x64\libHarfBuzzSharp.dll" size="1607104">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>KAmhKbaB9ye/0ph7FAQ6W9HGg1VVH92PeSrIx1oheOg=</dsig:DigestValue>
+      <dsig:DigestValue>7Rfx8RePr6QDiVD1I2F+mQD6PWAQIUuePuYxXfG/AHI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="x86\libHarfBuzzSharp.dll" size="1363392">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bJ+Sm1J7tyldi4XPkpT7b5uiBDyAOj32UzL6mEbXHVk=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
