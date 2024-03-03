@@ -608,11 +608,16 @@ namespace KomisyonNET
 
         private void mBtnClear_Click(object sender, EventArgs e)
         {
-            statisticsPath = "";
-            if (statisticModels != null)
+            if (mRadioBtnColumn.Checked)
             {
-                statisticModels.Clear();
+                mRadioBtnColumn.Checked = false;
             }
+            if (!mRadioBtnStacked.Checked)
+            {
+                mRadioBtnStacked.Checked = true;
+            }
+            statisticsPath = "";
+            
 
 
             mLabelTInvoice.Text = "0,00";
@@ -627,12 +632,7 @@ namespace KomisyonNET
             statistics.UpdateSolidGauge(solidGauge1);
             labelTest.Text = "0,00";
 
-            //mRadioBtnEarn.Checked = false;
-            //mRadioBtnName.Checked = false;
-            if (!mRadioBtnStacked.Checked)
-            {
-                mRadioBtnStacked.Checked = true;
-            }
+            
             if (mRadioBtnEarn.Checked)
             {
                 mRadioBtnEarn.Checked = false;
@@ -640,6 +640,11 @@ namespace KomisyonNET
             else if (mRadioBtnName.Checked)
             {
                 mRadioBtnName.Checked = false;
+            }
+
+            if (statisticModels != null)
+            {
+                statisticModels.Clear();
             }
 
             mCardTable.Enabled = false;
