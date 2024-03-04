@@ -28,3 +28,23 @@ KomisyonNET'in kurulumu basit ve doğrudandır. Aşağıdaki adımları takip ed
 2. Kurulum sihirbazının talimatlarını takip edin.
 3. Kurulum tamamlandıktan sonra, uygulamayı başlatın ve Paket Taxi faturalarınızı işlemeye başlayın.
 4. Test için 'Setup/faturalar' içindeki örnek faturaları kullanabilirsiniz.
+
+## Resimler
+<div align="center">
+  <img src="https://github.com/Atakan-Demir/komisyonNET/blob/main/pictures/1.png">
+</div>
+<div align="center">
+  <img src="https://github.com/Atakan-Demir/komisyonNET/blob/main/pictures/2.png">
+</div>
+<div align="center">
+  <img src="https://github.com/Atakan-Demir/komisyonNET/blob/main/pictures/3.png">
+</div>
+<div align="center">
+  <img src="https://github.com/Atakan-Demir/komisyonNET/blob/main/pictures/4.png">
+</div>
+<div align="center">
+  <img src="https://github.com/Atakan-Demir/komisyonNET/blob/main/pictures/5.png">
+</div>
+<div align="center">
+  <img src="https://github.com/Atakan-Demir/komisyonNET/blob/main/pictures/6.png">
+</div>
